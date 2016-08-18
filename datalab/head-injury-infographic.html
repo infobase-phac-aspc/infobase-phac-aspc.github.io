@@ -1,0 +1,2436 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>
+<html class="no-js lt-ie9" lang="en">
+  <![endif]-->
+  <!--[if gt IE 8]>
+  <!-->
+    <html class="no-js" lang="en">
+    <!--<![endif]-->
+  <head>
+    <meta charset="utf-8"/>
+    <title>Data Blog - Chronic Disease Infobase | Public Health Agency of Canada</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities"/>
+    <meta name="dcterms.title" content="GCWU theme - Web Experience Toolkit"/>
+    <meta name="dcterms.creator" content="French name of the content author / Nom en français de l'auteur du contenu"/>
+    <meta name="dcterms.issued" title="W3CDTF" content="Date published (YYYY-MM-DD) / Date de publication (AAAA-MM-JJ)"/>
+    <meta name="dcterms.modified" title="W3CDTF" content="Date modified (YYYY-MM-DD) / Date de modification (AAAA-MM-JJ)"/>
+    <meta name="dcterms.subject" title="scheme" content="French subject terms / Termes de sujet en français"/>
+    <meta name="dcterms.language" title="ISO639-2" content="eng"/>
+    <!--[if gte IE 9 | !IE ]><!--> 
+    <link href="../assets/favicon.ico" rel="icon" type="image/x-icon"/>
+    <!--<link rel="stylesheet" href="../css/wet-boew.min.css"/>--> 
+    <!--<![endif]--> 
+    <!-- b<link rel="stylesheet" href="../css/theme.min.css"/>--> 
+    <!--[if lt IE 9]>
+    <link href="../assets/favicon.ico" rel="shortcut icon"/>
+    <link rel="stylesheet" href="../css/ie8-wet-boew.min.css"/>
+    <link rel="stylesheet" href="../css/ie8-theme.min.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <script src="../js/ie8-wet-boew.min.js"></script><![endif]--> 
+    <noscript>
+      <link rel="stylesheet" href="../css/noscript.min.css"/>
+    </noscript>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="./textures.js"></script>
+    <script src="./saveSvgAsPng.js"></script>
+    <!-- Custom CSS -->
+    <style>
+      html.details .checkmark__rect {
+      width: 50px;
+      height: 50px;
+      stroke-dasharray: 201px;
+      stroke-dashoffset: 166px;
+      stroke-width: 5px;
+      stroke-miterlimit: 11px;
+      fill: none;
+      animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+      }
+      .checkmark1, .checkmark2, .checkmark3, .checkmark4, .checkmark5, .checkmark6, .checkmark7, .checkmark8, .checkmark9, .checkmark10, .checkmark11, .checkmark12, .checkmark13 {
+      transform: scale(0.5);
+      display: inline;
+      stroke-width: 5px;
+      stroke: #fff;
+      stroke-miterlimit: 10px;
+      }
+      .checkmark1 {
+      animation: fill1 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark2 {
+      animation: fill2 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark3 {
+      animation: fill3 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark4 {
+      animation: fill4 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark5 {
+      animation: fill5 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark6 {
+      animation: fill6 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark7 {
+      animation: fill7 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark8 {
+      animation: fill8 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark9 {
+      animation: fill9 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark10 {
+      animation: fill10 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark11 {
+      animation: fill11 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark12 {
+      animation: fill12 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark13 {
+      animation: fill13 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      html.details .checkmark__check_load {
+      stroke-dasharray: 48px;
+      stroke-dashoffset: 48px;
+      animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+      }
+      html.details .checkmark__check {
+      stroke-dasharray: 48px;
+      stroke-dashoffset: 48px;
+      animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+      }
+      @keyframes stroke {
+      100% {
+      stroke-dashoffset: 0px;
+      }
+      }
+      @keyframes scale {
+      0%, 100% {
+      transform: none;
+      }
+      50% {
+      transform: scale3d(1.1, 1.1, 1);
+      }
+      }
+      @keyframes fill1 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #1f77b4;
+      }
+      }
+      @keyframes fill2 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #aec7e8;
+      }
+      }
+      @keyframes fill3 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #ff7f0e;
+      }
+      }
+      @keyframes fill4 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #ffbb78;
+      }
+      }
+      @keyframes fill5 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #2ca02c;
+      }
+      }
+      @keyframes fill6 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #98df8a;
+      }
+      }
+      @keyframes fill7 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #d62728;
+      }
+      }
+      @keyframes fill8 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #ff9896;
+      }
+      }
+      @keyframes fill9 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #9467bd;
+      }
+      }
+      @keyframes fill10 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #c5b0d5;
+      }
+      }
+      @keyframes fill11 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #8c564b;
+      }
+      }
+      @keyframes fill12 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #c49c94;
+      }
+      }
+      @keyframes fill13 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #e377c2;
+      }
+      }
+      body {
+      font-size: 16px;
+      }
+      #dataViz { 
+      font-size: 14px;
+      }
+      .btn {
+      font-size: 16px !important;
+      }
+      label.off {
+      color: lightgray;
+      }
+      #dataViz th, #dataViz td span {
+      text-align: center;
+      font-size: 25px;
+      font-family: Calibri, "Times New Roman", serif;
+      }
+      .disabled {
+      display: none;
+      }
+      .animated-ring {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      width: 200px;
+      display: inline;
+      }
+      input[type=checkbox] {
+      display: none;
+      }
+      svg {
+      overflow: visible !important;
+      }
+      .titlerow{
+      padding-left:40px;
+      }
+      .selection {
+      text-align: center;
+      margin-top: 20px;
+      }
+      fieldset ul li {
+      display: inline-block;
+      width: 240px;
+      text-align: left;
+      }
+      li svg {
+      text-align: left;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      top: 5px;
+      margin-right: 5px;
+      }
+      label {
+      margin-bottom: 0;
+      margin-right: 5px;
+      }
+      table{
+      border-collapse:collapse;
+      column-gap:40px;
+      }
+      tbody {
+      text-align: center;
+      }
+      thead {
+      display:table-row-group;
+      text-align:center;
+      }
+      td {
+      width:40px;
+      }
+      th {
+      font-weight:bold;
+      font-size:35px;
+      text-align:center;
+      }
+      h5 {
+      vertical-align:middle;
+      font-weight:bold;
+      font-size:40px;
+      text-align:center;
+      }
+      #controls {
+      width: 100%;
+      margin: 0 auto;
+      }
+      #btnControls {
+      text-align:center;
+      }
+      li svg rect {
+      width: 20px;
+      height: 20px;
+      }
+      fieldset {
+      border: 2px groove !important;
+      width: auto;
+      height: 235px;
+      }
+      fieldset legend {
+      font-weight: bold;
+      font-size: auto;
+      width: auto;
+      margin: 0px auto;
+      border: 0;
+      }
+      .rotate {
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      color: #5cb85c;
+      }
+      fieldset ul {
+      text-align: left;
+      margin-top: 15px;
+      margin-bottom: 0;
+      }
+      .cmn-toggle {
+      position: absolute;
+      margin-left: -9999px;
+      visibility: hidden;
+      }
+      .cmn-toggle + label {
+      position: relative;
+      cursor: pointer;
+      outline: none;
+      user-select: none;
+      }
+      input.cmn-toggle-round + label {
+      top:5px;
+      padding: 2px;
+      width: 52px;
+      height:26px;
+      background-color: #dddddd;
+      border-radius: 26px;
+      }
+      input.cmn-toggle-round + label:before,
+      input.cmn-toggle-round + label:after {
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      bottom: 1px;
+      content: "";
+      }
+      input.cmn-toggle-round + label:before {
+      right: 1px;
+      background-color: #f1f1f1;
+      border-radius: 26px;
+      transition: background 0.4s;
+      }
+      input.cmn-toggle-round + label:after {
+      width: 24px;
+      background-color: #fff;
+      border-radius: 100%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: margin 0.4s;
+      }
+      input.cmn-toggle-round:checked + label:before {
+      background-color: #8ce196;
+      }
+      input.cmn-toggle-round:checked + label:after {
+      margin-left: 26px;
+      }
+      polyline{
+      opacity: 0.3;
+      stroke: #000;
+      stroke-width: 2px;
+      fill: none;
+      }
+      #preview {
+      display: none;
+      }
+      .toggleImg {
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+      }
+      @media screen and (max-width: 991px) {
+      table, thead, tbody, th, td, tr { 
+      display: block; 
+      text-align:center;
+      }
+      thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      }
+      tr { border: 1px solid #ccc; }
+      td { 
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      }
+      td:before { 
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+      }
+      fieldset {
+      height: auto;
+      padding-bottom: 15px;
+      }
+      fieldset ul {
+      display: inline-block;
+      }
+      }
+    </style>
+  </head>
+  <body vocab="http://schema.org/" typeof="WebPage">
+    <header role="banner">
+     </header>
+    <main role="main" property="mainContentOfPage" class="container">
+      <h1 id="wb-cont" property="name">Concussion & Brain Injuries in Canadian Children and Youth</h1>
+      <h2>Top 5 Sports and Recreational Activities Responsible for Concussion and Other Brain Injury Related Hospital Visits</h2>
+      <p>Injuries are the leading cause of death among Canadians aged 1-44 years. Head injuries are common among some sports, and their potential short-and long-term consequences can be severe. Children and youth are particularly at risk of long-term effects following concussions and other head injuries. It&rsquo;s about <a href="http://infobase.phac-aspc.gc.ca/datalab/be-active-en.html?utm_source=Data%20Blog&utm_medium=Infobase&utm_campaign=FIFA_DataBlog_Feb9_EN">playing smart</a>, limiting the risk of head injuries while being active. Many sports-related head injuries, including concussions, are preventable and with early and proper detection and care, risks can be minimized.</p>
+      <p>This interactive tool shows statistics for the most common sports and recreational activities related to concussions and other brain injuries among Canadian children and youth. The default mode will show the top five sports for each age group and sex, plus you can use the controls and legend to customize your charts.  Information was generated by the <a href="http://www.phac-aspc.gc.ca/injury-bles/chirpp/index-eng.php">electronic Canadian Hospitals Injury Reporting and Prevention Program</a> (eCHIRPP).</p>
+      <p>The Canadian Hospitals Injury Reporting and Prevention Program (CHIRPP) is an emergency department (ED)-based injury and poisoning surveillance system operating in 16 sites across Canada. It collects patients' accounts of pre-event injury circumstances (narratives of "what went wrong") using the Injury/Poisoning Reporting form, and additional clinical data about the injured person. The CHIRPP comprises a sample of Canada's hospital emergency departments, so the data should not be used to draw conclusions about injury patterns across the entire Canadian population.</p>
+      <p>To learn more about head injuries related to sports, visit the <a href="http://www.phac-aspc.gc.ca/publicat/hpcdp-pspmc/36-1/ar-03-eng.php?utm_source=Data%20Blog&utm_medium=Infobase&utm_campaign=HPCDPJ_DataBLog_Feb9_EN">Agency&rsquo;s website</a>.</p>
+      <div class="clearfix"></div>
+      <div role="application">
+        <div tabindex="0" id="controls" style="-webkit-backface-visibility: hidden;">
+          <div tabindex="0" aria-posinset="2" aria-setsize="2" id="legendControls" class="legend text-center col-md-9">
+            <fieldset>
+              <legend>What do you want to see?</legend>
+              <ul style="list-style-type:none;">
+                <div class="row">
+                  <div class="col-md-4">
+                    <span aria-posinset="1" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                      <li style="border-color: #1f77b4">
+                        <svg class="checkmark1" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                          <rect class="checkmark__rect" width="50" height="50" id='basketballPath' />
+                          <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <label>Basketball</label><input id="basketball" type="checkbox" name="sliceEnabled" value="Basketball" checked/>
+                      </li>
+                    </span>
+                  </div>
+                  <div class="col-md-3">
+                    <span aria-posinset="2" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                      <li style="border-color: #aec7e8">
+                        <svg class="checkmark2" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                          <rect class="checkmark__rect" width="50" height="50" id='bicyclingPath' />
+                          <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <label>Bicycling</label><input id="bicycling" type="checkbox" name="sliceEnabled" value="Bicycling" checked/>
+                      </li>
+                    </span>
+                  </div>
+                  <div class="col-md-4">
+                    <span aria-posinset="3" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                      <li style="border-color: #ff7f0e">
+                        <svg class="checkmark3" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                          <rect class="checkmark__rect" width="50" height="50" id='cheerleadingPath' />
+                          <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <label>Cheerleading</label><input id="cheerleading" type="checkbox" name="sliceEnabled" value="Cheerleading" checked/>
+                      </li>
+                    </span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <span aria-posinset="4" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                      <li style="border-color: #ffbb78">
+                        <svg class="checkmark4" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                          <rect class="checkmark__rect" width="50" height="50" id='cagPath' />
+                          <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <label>Children's Active Games</label><input id="activegames" type="checkbox" name="sliceEnabled" value="Childrens Active Games" checked/>
+                      </li>
+                    </span>
+                  </div>
+                  <div class="col-md-3">
+                    <span aria-posinset="5" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                      <li style="border-color: #2ca02c">
+                        <svg class="checkmark5" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                          <rect class="checkmark__rect" width="50" height="50" id='footballPath' />
+                          <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <label>Football</label><input id="football" type="checkbox" name="sliceEnabled" value="Football" checked/>
+                      </li>
+                    </span>
+                  </div>
+                  <div class="col-md-4">
+                    <span aria-posinset="6" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                      <li style="border-color: #98df8a">
+                        <svg class="checkmark6" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                          <rect class="checkmark__rect" width="50" height="50" id='hockeyPath' />
+                          <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <label>Ice Hockey</label><input id="hockey" type="checkbox" name="sliceEnabled" value="Ice Hockey" checked/>
+                      </li>
+                    </span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <span aria-posinset="7" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                      <li style="border-color: #d62728">
+                        <svg class="checkmark7" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                          <rect class="checkmark__rect" width="50" height="50" id='skatingPath' />
+                          <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <label>Ice Skating</label><input id="skating" type="checkbox" name="sliceEnabled" value="Ice Skating" checked/>
+                      </li>
+                    </span>
+                  </div>
+                  <div class="col-md-3">
+                    <span aria-posinset="8" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                      <li style="border-color: #ff9896">
+                        <svg class="checkmark8" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                          <rect class="checkmark__rect" width="50" height="50" id='otherPath' />
+                          <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <label class="off">Other</label><input id="other" type="checkbox" name="sliceEnabled" value="Other" />
+                      </li>
+                    </span>
+                  </div>
+                  <div class="col-md-4">
+                    <span aria-posinset="9" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                      <li style="border-color: #9467bd">
+                        <svg class="checkmark9" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                          <rect class="checkmark__rect" width="50" height="50" id='pePath' />
+                          <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <label>Playground Equipment</label><input id="playground" type="checkbox" name="sliceEnabled" value="Playground Equipment" checked/>
+                      </li>
+                    </span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <span aria-posinset="10" aria-setsize="13" onclick="legendToggle(this)">
+                      <li style="border-color: #c5b0d5">
+                        <svg class="checkmark10" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                          <rect class="checkmark__rect" width="50" height="50" id='ringettePath' />
+                          <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <label>Ringette</label><input id="ringette" type="checkbox" name="sliceEnabled" value="Ringette" checked/>
+                      </li>
+                    </span>
+                  </div>
+                  <div class="col-md-3">
+                    <span aria-posinset="11" aria-setsize="13" onclick="legendToggle(this)">
+                      <li style="border-color: #8c564b">
+                        <svg class="checkmark11" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                          <rect class="checkmark__rect" width="50" height="50" id='rugbyPath' />
+                          <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <label>Rugby</label><input id="rugby" type="checkbox" name="sliceEnabled" value="Rugby" checked/>
+                      </li>
+                    </span>
+                  </div>
+                  <div class="col-md-4">
+                    <span aria-posinset="12" aria-setsize="13" onclick="legendToggle(this)">
+                      <li style="border-color: #c49c94">
+                        <svg class="checkmark12" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                          <rect class="checkmark__rect" width="50" height="50" id='sleddingPath' />
+                          <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <label>Sledding/Tobogganing</label><input id="sledding" type="checkbox" name="sliceEnabled" value="SleddingTobogganing" checked/>
+                      </li>
+                    </span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <span aria-posinset="13" aria-setsize="13" onclick="legendToggle(this)">
+                      <li style="border-color: #e377c2">
+                        <svg class="checkmark13" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                          <rect class="checkmark__rect" width="50" height="50" id='soccerPath' />
+                          <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <label>Soccer</label><input id="soccer" type="checkbox" name="sliceEnabled" value="Soccer" checked/>
+                      </li>
+                    </span>
+                  </div>
+                </div>
+              </ul>
+            </fieldset>
+          </div>
+          <div tabindex="0" aria-posinset="1" aria-setsize="2" id="btnControls" class="col-md-3">
+            <fieldset>
+              <legend>Controls</legend>
+              <button  aria-posinset="1" aria-setsize="4" aria-controls="dataViz" title="View data visualization by age" style="margin:10px;display:inline-block;" id="AgeSexBtn" class="btn btn-primary AgeSexBtn" type="button" value="Sex" onclick="changeTableFormat();">View by Age</button>
+              <a  aria-posinset="4" aria-setsize="4" aria-controls="dataViz" title="Download source data in .csv format" style="margin:10px;display:inline-block;" id="DownloadBtn" class="btn btn-primary DownloadBtn">Download (.csv)</a>
+              <div style="margin:10px;" aria-posinset="2" aria-setsize="4"><span>Relative Size</span><input id="ToggleBtn" aria-controls="dataViz" title="Toggle relative size" class="cmn-toggle cmn-toggle-round" checked type="checkbox">
+                <label for="ToggleBtn"></label><img class='toggleImg' src='./img/questionIcon.gif' width="15" height="auto" style="position:relative;top:-4px;" title="This toggles relative size of all pie charts. When enabled, the pie charts are sized relative to the pie chart with the largest center total." />
+              </div>
+              <div style="margin:10px;" aria-posinset="3" aria-setsize="4"><span>Accessibility View</span><input id="ViewBtn" aria-controls="dataViz" title="Toggle accessibility view" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                <label for="ViewBtn"></label><img class='toggleImg' src='./img/questionIcon.gif' width="15" height="auto" style="position:relative;top:-4px;" title="This toggles the legend of the pie charts between colours and textures so that they can be viewed and printed in black and white." />
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div style="padding-top:40px;">
+          <table id = "dataViz" align="center" style="font-weight:bold;">
+            <thead>
+              <tr>
+                <th></th>
+                <th id ="h2">Male</th>
+                <th id= "h3">Female</th>
+                <th id= "h4" style="display:none">
+                  <div>Hidden</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span id="b1">Ages 5-9</span></td>
+                <td id= "b2">
+                  <div id="sports_m_0509" class="animated-ring">
+                    <svg id="svg1"></svg>
+                  </div>
+                </td>
+                <td id= "b3">
+                  <div id="sports_f_0509" class="animated-ring">
+                    <svg id="svg4"></svg>
+                  </div>
+                </td>
+                <td id="b4">
+                  <div  style="display:none">Hidden</div>
+                </td>
+              </tr>
+              <tr>
+                <td><span id="c1">Ages 10-14</span></td>
+                <td id="c2">
+                  <div id="sports_m_1014" class="animated-ring">
+                    <svg id="svg2"></svg>
+                  </div>
+                </td>
+                <td id="c3">
+                  <div id="sports_f_1014" class="animated-ring">
+                    <svg id="svg5"></svg>
+                  </div>
+                </td>
+                <td id="c4">
+                  <div style="display:none" >Hidden</div>
+                </td>
+              </tr>
+              <tr>
+                <td ><span id="d1">Ages 15-19</span></td>
+                <td id="d2">
+                  <div id="sports_m_1519" class="animated-ring">
+                    <svg id="svg3"></svg>
+                  </div>
+                </td>
+                <td id="d3">
+                  <div id="sports_f_1519" class="animated-ring">
+                    <svg id="svg6"></svg>
+                  </div>
+                </td>
+                <td id="d4">
+                  <div style="display:none">Hidden</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.min.js" data-semver="3.4.6" data-require="d3@*"></script>
+        <script>
+		  // isIE is a variable that checks if the current browser is Microsoft Internet Explorer/Edge
+          var isIE = /*@cc_on!@*/false || !!document.documentMode;
+          
+		  // After everything on the page has loaded, this function executes.
+          $(document).ready(function() {          
+          	if (isIE)
+          		$('#imgDownloadDiv').hide();
+				
+          	$('#share a').each(function() {
+			// This function adds the current window location to the twitter and facebook share button href attributes.
+          		if ($(this).attr('id') !== 'githubBtn')
+          			$(this).attr('href', $(this).attr('href') + encodeURIComponent(document.URL));
+          	});
+			
+			$('#generateImage').on('click', function() {
+			// This function is called when the generate image button in the share section is clicked.
+          				$('#imageDownload').text('Please wait...');
+          				download();
+          			});
+			$('#DownloadBtn').on('click', function() {
+			// This function is called when the Download (.csv) button is clicked.
+			// Takes data from each data object array (for each svg), and converts
+			// it into text that can be loaded into a Microsoft Excel file.
+				var csv = '';
+				if (!isIE)
+					csv = 'data:text/csv;charset=utf-8,';
+				csv += 'Age Group,Sport/Recreational Activity,Count\r\n';
+				csv += ConvertToCSV(sports_m_0509, 'Males (5-9)');
+				csv += ConvertToCSV(sports_m_1014, 'Males (10-14)');
+				csv += ConvertToCSV(sports_m_1519, 'Males (15-19)');
+				csv += ConvertToCSV(sports_f_0509, 'Females (5-9)');
+				csv += ConvertToCSV(sports_f_1014, 'Females (10-14)');
+				csv += ConvertToCSV(sports_f_1519, 'Females (15-19)');
+				if (isIE) {
+					var IEwindow = window.open();
+						IEwindow.document.write('sep=,\r\n' + csv);
+						IEwindow.document.close();
+						IEwindow.document.execCommand('SaveAs', true, 'head-injury-infographic.csv');
+						IEwindow.close();
+				}
+				else {
+					var downloadData = document.getElementById('DownloadBtn');
+						downloadData.href = encodeURI(csv);
+						downloadData.download = 'head-injury-infographic.csv';
+				}
+			});
+          });
+          
+          changeTableFormat();
+          $('.checkmark8').find('path').hide();
+          
+          	var lastControl = "";
+			
+			// legendToggle() executes every time an item in the legend is clicked.
+              function legendToggle(item) {
+          		$(item).find('label').first().toggleClass('off');
+				if ($(item).find('label').first().attr('class') === 'off')
+					$(item).find('input').first().prop("checked", false);
+				else
+					$(item).find('input').first().prop("checked", true);
+          		$(item).find('path').toggle();
+                selectionChanged($(item).find('input').first());
+              }
+              
+			  // Initialize slider toggle variables.
+              var notRel = true;
+              var aView = false;
+          	
+		// generateUrl() executes when the Twitter or Facebook share buttons are clicked.
+          function generateUrl(btn) {
+          	var queryString = '?';
+          	var legend = [];
+          	var controls = [];
+          	var checked = $("input:checkbox");
+          	for (var i = 0; i < 13; i++) {
+          		if ($(checked[i]).prop('checked') == false && i != 7) {
+          			legend.push(i + 1);
+          		}
+          		else if (i == 7) {
+          			if ($('#other').prop('checked') == true)
+          				legend.push(8);
+          		}
+          	}
+          	if ($('#b1').text() !== 'Male')
+          		controls.push(1);
+          	if (!notRel)
+          		controls.push(2);
+          	if (aView)
+          		controls.push(3);
+          	if (controls.length != 0)
+          		queryString += 'c=' + controls.join(',') + '&';
+          	if (legend.length != 0)
+          		queryString += 'l=' + legend.join(',');
+          	var shareLink = $(btn).attr('href').split('=')[0];
+          	var currentLink = document.URL.split('?')[0];
+          	if (queryString !== '?')
+          		currentLink = currentLink + queryString;
+          	currentLink = encodeURIComponent(currentLink);
+          	$(btn).attr('href', shareLink + '=' + currentLink);
+          }
+              
+		// getUrlParameter retrieves the current URL's query string.
+          var getUrlParameter = function getUrlParameter(sParam) {
+          		var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+          			sURLVariables = sPageURL.split('&'),
+          			sParameterName,
+          			i;
+          
+          		for (i = 0; i < sURLVariables.length; i++) {
+          			sParameterName = sURLVariables[i].split('=');
+          
+          			if (sParameterName[0] === sParam) {
+          				return sParameterName[1] === undefined ? true : sParameterName[1];
+          			}
+          		}
+          	};
+			
+			// Retrieves the legend and control parameters from the query string generated from shared URLs.
+          	var legend = getUrlParameter('l');
+          	var controls = getUrlParameter('c');
+			
+			// When the URL contains legend or control parameters, the page is updated with the changes.
+          	if (typeof(controls) != 'undefined' || typeof(legend) != 'undefined') {
+          		if (typeof(controls) == 'undefined' && typeof(legend) != 'undefined') {
+          			legend = legend.split(',');
+          			for (var i = 0; i < legend.length; i++) {
+          					$('.checkmark' + legend[i]).find('path').hide();
+          					$('.checkmark' + legend[i]).parent().find('label').first().toggleClass('off');
+          					$('.checkmark' + legend[i]).parent().find('input').prop('checked', false);
+          			}
+          			if (legend.indexOf("8") != -1) {
+          				$('.checkmark8').find('path').show();
+          				$('.checkmark8').parent().find('label').first().removeClass('off');
+          				$('.checkmark8').parent().find('input').prop('checked', true);
+          			}
+          		}
+          		else if (typeof(controls) != 'undefined' && typeof(legend) == 'undefined') {
+          			controls = controls.split(',');
+          			for (var i = 0; i < controls.length; i++) {
+          				switch (controls[i]) {
+          					case '1':
+          						changeTableFormat();
+          					break;
+          					case '2':
+          						$('#ToggleBtn').trigger('click');
+          						notRel = false;
+          					break;
+          					case '3':
+          						$('#ViewBtn').trigger('click');
+          						$('input:checkbox').toggle();
+          						aView = !aView;
+          					break;
+          				}
+          			}
+          		}
+          		else {
+          			legend = legend.split(',');
+          			controls = controls.split(',');
+          			for (var i = 0; i < legend.length; i++) {
+          					$('.checkmark' + legend[i]).find('path').hide();
+          					$('.checkmark' + legend[i]).parent().find('label').first().toggleClass('off');
+          					$('.checkmark' + legend[i]).parent().find('input').prop('checked', false);
+          			}
+          			if (legend.indexOf("8") != -1) {
+          				$('.checkmark8').find('path').show();
+          				$('.checkmark8').parent().find('label').first().removeClass('off');
+          				$('.checkmark8').parent().find('input').prop('checked', true);
+          			}
+          			for (var i = 0; i < controls.length; i++) {
+          				switch (controls[i]) {
+          					case '1':
+          						changeTableFormat();
+          					break;
+          					case '2':
+          						$('#ToggleBtn').trigger('click');
+          						notRel = false;
+          					break;
+          					case '3':
+          						$('#ViewBtn').trigger('click');
+          						$('input:checkbox').toggle();
+          						aView = !aView;
+          					break;
+          				}
+          			}
+          		}
+          }
+          	
+          // swapChart() swaps the charts when the table format is changed.
+          function swapChart(obj1, obj2){
+              var temp = document.createElement("div");
+              obj1.parentNode.insertBefore(temp, obj1);
+              obj2.parentNode.insertBefore(obj1,obj2);
+              temp.parentNode.insertBefore(obj2,temp);
+              temp.parentNode.removeChild(temp);
+          }
+          
+		  // The ToggleBtn onclick event toggles the relative size slider.
+		  // The notRel variable is toggled and the according function for relative size is executed.
+          $('#ToggleBtn').click(function() {
+          	$('#imageDownload').attr('disabled', true);
+              notRel = !notRel;
+              if (!notRel)
+                  disableRel();
+              else
+                  enableRel();
+          });
+		  
+		  // The ViewBtn onclick event toggles the accessibility view slider.
+          $('#ViewBtn').click(function() {
+          	$('#imageDownload').attr('disabled', true);
+              $('input:checkbox').toggle();
+              aView = !aView;
+              lastControl = "accessibilityView";
+              startDraw();
+          });
+          
+          // changeTableFormat() swaps the button text and rearranges the table.	  
+          function changeTableFormat(){
+          	$('#imageDownload').attr('disabled', true);
+              var elem= document.getElementById("AgeSexBtn");
+              if(elem.value == "Age"){
+                  elem.firstChild.data = "View by Age";
+                  elem.value = "Sex";
+              }
+              else{
+                  elem.firstChild.data = "View by Sex";
+                  elem.value = "Age";
+              }
+              swapChart(document.getElementById('b3'), document.getElementById('c2'));
+              swapChart(document.getElementById('b4'), document.getElementById('d2'));
+              swapChart(document.getElementById('d3'), document.getElementById('c4'));
+              swapTitles();
+          }
+          
+          
+          // swapTitles() is used to change between comparison by sex and by age group          
+          var swapBool = false;
+          function swapTitles(){
+              var x,y,temp;
+              x = document.getElementById('h2');
+              y = document.getElementById('b1');
+              temp = x.firstChild.data;
+              x.firstChild.data=y.firstChild.data;
+              y.firstChild.data=temp;
+              x = document.getElementById('h3');
+              y = document.getElementById('c1');
+              temp = x.innerHTML;
+              x.innerHTML=y.innerHTML;
+              y.innerHTML=temp;
+              x = document.getElementById('h4');
+              y = document.getElementById('d1');
+              if(x.style.display=="none"){
+                  x.style.display="inline";
+                  y.style.display="none";
+              }
+              else{
+                  x.style.display="none";
+                  y.style.display="inline";
+              }
+              temp = x.innerHTML;
+              x.innerHTML=y.innerHTML;
+              y.innerHTML=temp;
+          }
+		  
+				// The following six arrays of objects contain the key webpage data.
+                  var sports_m_0509 = [{ dept: 'Other', 					count: 1054.369255150555 },
+									   { dept: 'Playground Equipment', 		count: 510 }, 
+									   { dept: 'Ice Hockey', 				count: 481 }, 
+									   { dept: 'Childrens Active Games', 	count: 306 }, 
+									   { dept: 'Soccer', 					count: 275 }, 
+									   { dept: 'Bicycling', 				count: 231 }];
+                  var sports_m_1014 = [{ dept: 'Other', 					count: 2119.082191780822 },
+									   { dept: 'Ice Hockey', 				count: 2091 }, 
+									   { dept: 'Football', 					count: 645 }, 
+									   { dept: 'Soccer', 					count: 578 }, 
+									   { dept: 'Basketball', 				count: 377 }, 
+									   { dept: 'Bicycling', 				count: 368 }];
+                  var sports_m_1519 = [{ dept: 'Other', 					count: 933.5558867362146 },
+									   { dept: 'Ice Hockey', 				count: 819 },
+									   { dept: 'Football', 					count: 389 },
+									   { dept: 'Rugby', 					count: 280 },
+									   { dept: 'Soccer', 					count: 228 },
+									   { dept: 'Basketball', 				count: 188 }];
+                  var sports_f_0509 = [{ dept: 'Other', 					count: 560.7253886010363 },
+									   { dept: 'Playground Equipment', 		count: 387 },
+									   { dept: 'SleddingTobogganing', 		count: 120 },
+									   { dept: 'Childrens Active Games', 	count: 118 },
+									   { dept: 'Bicycling', 				count: 80 },
+									   { dept: 'Ice Skating', 				count: 68 }];
+                  var sports_f_1014 = [{ dept: 'Other', 					count: 1450.917211328976 },
+									   { dept: 'Soccer', 					count: 445 },
+									   { dept: 'Ice Hockey', 				count: 296 },
+									   { dept: 'Basketball', 				count: 246 },
+									   { dept: 'Ringette', 					count: 132 },
+									   { dept: 'Playground Equipment', 		count: 112 }];
+                  var sports_f_1519 = [{ dept: 'Other', 					count: 813.7527675276753 },
+									   { dept: 'Soccer', 					count: 336 },
+									   { dept: 'Basketball', 				count: 183 },
+									   { dept: 'Ice Hockey', 				count: 176 },
+									   { dept: 'Rugby', 					count: 167 },
+									   { dept: 'Cheerleading', 				count: 101 }];
+          		
+				// Initalize variables that are passed between functions, and sizing variables.
+                  var lastClick = "";
+                  var maxWidth = 360;
+                  var maxHeight = 360;
+                  var outerRadius = 180;
+                  var ringWidth = 80;
+                  var config;
+                  var sizeMultiplier;
+                  var sum;
+                  var enterAntiClockwise = {
+                      startAngle: Math.PI * 2,
+                      endAngle: Math.PI * 2
+                  };                  
+                  var prevStart = Math.PI * 2;
+                  var prevEnd = Math.PI * 2;
+				  var prevOffset = 0;
+                  var sumMax;
+				
+				// relativeSize() calculates the sum of each pie chart, and saves the largest value.
+                  window.onload = relativeSize();          
+                  function relativeSize() {
+                      var sum1 = d3.round(d3.sum(sports_m_0509, function(d) {
+                          return d.count;
+                      }));
+                      var sum2 = d3.round(d3.sum(sports_m_1014, function(d) {
+                          return d.count;
+                      }));
+                      var sum3 = d3.round(d3.sum(sports_m_1519, function(d) {
+                          return d.count;
+                      }));
+                      var sum4 = d3.round(d3.sum(sports_f_0509, function(d) {
+                          return d.count;
+                      }));
+                      var sum5 = d3.round(d3.sum(sports_f_1014, function(d) {
+                          return d.count;
+                      }));
+                      var sum6 = d3.round(d3.sum(sports_f_1519, function(d) {
+                          return d.count;
+                      }));
+                      var sumArray = [sum1, sum2, sum3, sum4, sum5, sum6];
+                      sumMax = d3.max(sumArray);
+                  }
+          
+					// The below code creates an array of the selected items on the 
+					// legend and slices the data from the pie charts that has not
+					// been selected.
+                      var checked = $("input:checkbox:checked");
+                      var checkArr = [];
+                      for (var i = 0; i < checked.length; i++)
+                          checkArr.push(checked[i].value);
+                      var sm1 = JSON.parse(JSON.stringify(sports_m_0509));
+                      var sm2 = JSON.parse(JSON.stringify(sports_m_1014));
+                      var sm3 = JSON.parse(JSON.stringify(sports_m_1519));
+                      var sf1 = JSON.parse(JSON.stringify(sports_f_0509));
+                      var sf2 = JSON.parse(JSON.stringify(sports_f_1014));
+                      var sf3 = JSON.parse(JSON.stringify(sports_f_1519));
+                      var copyArr = [sm1, sm2, sm3, sf1, sf2, sf3];
+                      for (var i = 0; i < copyArr.length; i++) {
+                          for (var j = 0; j < copyArr[i].length; j++) {
+                              if (checkArr.indexOf(copyArr[i][j].dept) == -1) {
+                                  copyArr[i][j].count = 0;
+                              }
+                          }
+                      }
+                      var sum1 = d3.round(d3.sum(sm1, function(d) {
+                          return d.count;
+                      }));
+                      var sum2 = d3.round(d3.sum(sm2, function(d) {
+                          return d.count;
+                      }));
+                      var sum3 = d3.round(d3.sum(sm3, function(d) {
+                          return d.count;
+                      }));
+                      var sum4 = d3.round(d3.sum(sf1, function(d) {
+                          return d.count;
+                      }));
+                      var sum5 = d3.round(d3.sum(sf2, function(d) {
+                          return d.count;
+                      }));
+                      var sum6 = d3.round(d3.sum(sf3, function(d) {
+                          return d.count;
+                      }));
+                      var sumArray = [sum1, sum2, sum3, sum4, sum5, sum6];
+                      sumMax = d3.max(sumArray);
+          			
+                      startDraw();
+          			
+					// startDraw() calls drawAnimatedRingChart() with the data selected on the legend.
+                  function startDraw() {
+                      drawAnimatedRingChart({
+                          el: '#sports_m_0509.animated-ring svg',
+                          outerRadius: outerRadius,
+                          innerRadius: outerRadius - ringWidth,
+                          data: sm1
+                      });
+                      drawAnimatedRingChart({
+                          el: '#sports_m_1014.animated-ring svg',
+                          outerRadius: outerRadius,
+                          innerRadius: outerRadius - ringWidth,
+                          data: sm2
+                      });
+                      drawAnimatedRingChart({
+                          el: '#sports_m_1519.animated-ring svg',
+                          outerRadius: outerRadius,
+                          innerRadius: outerRadius - ringWidth,
+                          data: sm3
+                      });
+                      drawAnimatedRingChart({
+                          el: '#sports_f_0509.animated-ring svg',
+                          outerRadius: outerRadius,
+                          innerRadius: outerRadius - ringWidth,
+                          data: sf1
+                      });
+                      drawAnimatedRingChart({
+                          el: '#sports_f_1014.animated-ring svg',
+                          outerRadius: outerRadius,
+                          innerRadius: outerRadius - ringWidth,
+                          data: sf2
+                      });
+                      drawAnimatedRingChart({
+                          el: '#sports_f_1519.animated-ring svg',
+                          outerRadius: outerRadius,
+                          innerRadius: outerRadius - ringWidth,
+                          data: sf3
+                      });
+          						
+          			setTimeout(function() {
+          				lineAdjust();			
+          			}, 550);
+                  }
+				  
+				  // drawAnimatedRingChart() initializes the pie charts on the webpage with the passed data parameter.
+                  function drawAnimatedRingChart(config) {
+                      var pie = d3.layout.pie().value(function(d) {
+                          return d.count;
+                      });
+                      
+                      var radius = 180;
+          
+                      var arc = d3.svg.arc();
+                      var outerArc = d3.svg.arc()
+          				.innerRadius(radius * 1.2)
+          				.outerRadius(radius * 1.2);
+          
+                      // This function helps transition between
+                      // a starting point and an ending point
+                      function tweenPie(finish) {
+                          var start = {
+                              startAngle: Math.PI * 2,
+                              endAngle: Math.PI * 2
+                          };
+                          var i = d3.interpolate(start, finish);
+                          return function(d) {
+                              return arc(i(d));
+                          };
+                      }
+          
+                      sum = d3.round(d3.sum(config.data, function(d) {
+                          return d.count;
+                      }));
+                      if(notRel)
+                          sizeMultiplier = sum/sumMax;
+                      else
+                          sizeMultiplier = 0.9;
+          				
+          			if(sum == 0)
+          				var sizeMultiplier = 1;
+          				
+                      arc.outerRadius(config.outerRadius || outerRadius)
+                          .innerRadius(config.innerRadius || innerRadius);
+          
+                      // Remove the previous ring
+                      d3.select(config.el).selectAll('g').remove();
+          
+                      var svg = d3.select(config.el)
+                          .attr({
+                              width: maxWidth,
+                              height: maxHeight
+                          });
+                          
+                      var key = function(d){ return d.data.dept; };
+                      
+                      function midAngle(d){
+          		        return d.startAngle + (d.endAngle - d.startAngle)/2;
+					}
+                      
+                      // Add the groups that will hold the arcs
+                      var groups = svg.selectAll('g.arc')
+                          .data(pie(config.data))
+                          .enter()
+                          .append('g')
+                          .attr('class', 'arc')
+          				.attr(
+          					'transform', 'translate(' + outerRadius + ', ' + outerRadius + ')'
+          					);
+          					
+                      svg.append("g")
+                          .attr('class', 'lines')
+                          .attr('transform', 'translate(180,180) scale(' + sizeMultiplier + ')');
+                      svg.append("g")
+                      	.attr("class", "labels")
+                      	.attr('transform', 'translate(180,180) scale(' + sizeMultiplier + ')');
+                          
+                      // Create the actual slices of the pie
+                      groups.append('path')
+          			.style({'transform': 'scale(' + sizeMultiplier + ')',
+          					'transition': 'transform .550s'})
+                      .attr('id', function(d) { return d.data.dept; })
+                      .attr({
+          				'transform': 'scale(' + sizeMultiplier + ')',
+						// The following function fills each slice with the correct colour or texture.
+                              'fill': function(d, i) {
+                                  var color = "";
+                                  switch (d.data.dept) {
+                                      case 'Basketball':
+                                          if (!aView) {
+                                              color = '#1f77b4';
+                                              $('#basketballPath').parent().attr('class', 'checkmark1');
+                                              $('#basketballPath').css({'stroke': color});
+                                              $('#basketballPath').css('fill', function () { if (isIE) return color; else return 'none'; });
+                                          }
+                                          else {
+                                              $('#basketballPath').parent().attr('class', '');
+                                              var t = textures.circles()
+                                                  .radius(6)
+                                                  .strokeWidth(2)
+                                                  .fill('white')
+                                                  .background('#343434');
+                                              svg.call(t);
+                                              color = t.url();
+                                              $('#basketballPath').css('fill', color);
+                                              $('#basketballPath').css({'stroke': '#343434'});
+                                          }
+                                          break;
+                                      case 'Bicycling':
+                                          if (!aView) {
+                                              color = '#aec7e8';
+                                              $('#bicyclingPath').parent().attr('class', 'checkmark2');
+                                              $('#bicyclingPath').css({'stroke': color});
+                                              $('#bicyclingPath').css('fill', function () { if (isIE) return color; else return 'none'; });
+                                          }
+                                          else {
+                                              $('#bicyclingPath').parent().attr('class', '');
+                                              var t = textures.lines()
+                                              .orientation("horizontal")
+          									.background("white");
+                                              svg.call(t);
+                                              color = t.url();
+                                              $('#bicyclingPath').css('fill', color);
+                                              $('#bicyclingPath').css({'stroke': '#343434'});
+                                          }
+                                          break;
+                                      case 'Cheerleading':
+                                          if (!aView) {
+                                              color = '#ff7f0e';
+                                              $('#cheerleadingPath').parent().attr('class', 'checkmark3');
+                                              $('#cheerleadingPath').css({'stroke': color});
+                                              $('#cheerleadingPath').css('fill', function () { if (isIE) return color; else return 'none'; });
+                                          }
+                                          else {
+                                              $('#cheerleadingPath').parent().attr('class', '');
+                                              var t = textures.circles()
+                                                  .radius(4)
+                                                  .strokeWidth(2)
+                                                  .fill('#343434')
+                                                  .background('white');
+                                              svg.call(t);
+                                              color = t.url();
+                                              $('#cheerleadingPath').css('fill', color);
+                                              $('#cheerleadingPath').css({'stroke': '#343434'});
+                                          }
+                                          break;
+                                      case 'Childrens Active Games':
+                                          if (!aView) {
+                                              color = '#ffbb78';
+                                              $('#cagPath').parent().attr('class', 'checkmark4');
+                                              $('#cagPath').css({'stroke': color});
+                                              $('#cagPath').css('fill', function () { if (isIE) return color; else return 'none'; });
+                                          }
+                                          else {
+                                              $('#cagPath').parent().attr('class', '');
+                                              var t = textures.lines()
+                                                  .orientation("horizontal")
+                                                  .stroke('white')
+                                                  .background('#343434');
+                                              svg.call(t);
+                                              color = t.url();
+                                              $('#cagPath').css('fill', color);
+                                              $('#cagPath').css({'stroke': '#343434'});
+                                          }
+                                          break;
+                                      case 'Football':
+                                          if (!aView) {
+                                              color = '#2ca02c';
+                                              $('#footballPath').parent().attr('class', 'checkmark5');
+                                              $('#footballPath').css({'stroke': color});
+                                              $('#footballPath').css('fill', function () { if (isIE) return color; else return 'none'; });
+                                          }
+                                          else {
+                                              $('#footballPath').parent().attr('class', '');
+                                              var t = textures.lines()
+                                                  .orientation("vertical")
+          										.background("white");
+                                              svg.call(t);
+                                              color = t.url();
+                                              $('#footballPath').css('fill', color);
+                                              $('#footballPath').css({'stroke': '#343434'});
+                                          }
+                                          break;
+                                      case 'Ice Hockey':
+                                          if (!aView) {
+                                              color = '#98df8a';
+                                              $('#hockeyPath').parent().attr('class', 'checkmark6');
+                                              $('#hockeyPath').css({'stroke': color});
+                                              $('#hockeyPath').css('fill', function () { if (isIE) return color; else return 'none'; });
+                                          }
+                                          else {
+                                              $('#hockeyPath').parent().attr('class', '');
+                                              var t = textures.lines()
+                                                  .orientation("vertical")
+                                                  .stroke('white')
+                                                  .background('#343434');
+                                              svg.call(t);
+                                              color = t.url();
+                                              $('#hockeyPath').css('fill', color);
+                                              $('#hockeyPath').css({'stroke': '#343434'});
+                                          }
+                                          break;
+                                      case 'Ice Skating':
+                                          if (!aView) {
+                                              color = '#d62728';
+                                              $('#skatingPath').parent().attr('class', 'checkmark7');
+                                              $('#skatingPath').css({'stroke': color});
+                                              $('#skatingPath').css('fill', function () { if (isIE) return color; else return 'none'; });
+                                          }
+                                          else {
+                                              $('#skatingPath').parent().attr('class', '');
+                                             var t = textures.paths()
+                                              .d("crosses")
+          									.background("white")
+                                              .size(30)
+                                              .thicker();
+                                              svg.call(t);
+                                              color = t.url();
+                                              $('#skatingPath').css('fill', color);
+                                              $('#skatingPath').css({'stroke': '#343434'});
+                                          }
+                                          break;
+                                      case 'Other':
+                                          if (!aView) {
+                                              color = '#ff9896';
+                                              $('#otherPath').parent().attr('class', 'checkmark8');
+                                              $('#otherPath').css({'stroke': color});
+                                              $('#otherPath').css('fill', function () { if (isIE) return color; else return 'none'; });
+                                          }
+                                          else {
+                                              $('#otherPath').parent().attr('class', '');
+                                              color = '#888';
+                                              $('#otherPath').css('fill', color);
+                                              $('#otherPath').css({'stroke': '#343434'});
+                                          }
+                                          break;
+                                      case 'Playground Equipment':
+                                          if (!aView) {
+                                              color = '#9467bd';
+                                              $('#pePath').parent().attr('class', 'checkmark9');
+                                              $('#pePath').css({'stroke': color});
+                                              $('#pePath').css('fill', function () { if (isIE) return color; else return 'none'; });
+                                          }
+                                          else {
+                                              $('#pePath').parent().attr('class', '');
+                                              var t = textures.lines()
+                                                  .orientation("vertical", "horizontal")
+                                                  .size(20)
+                                                  .strokeWidth(1.5)
+                                                  .background('#343434')
+                                                  .stroke('white');
+                                              svg.call(t);
+                                              color = t.url();
+                                              $('#pePath').css('fill', color);
+                                              $('#pePath').css({'stroke': '#343434'});
+                                          }
+                                          break;
+                                      case 'Ringette':
+                                          if (!aView) {
+                                              color = '#c5b0d5';
+                                              $('#ringettePath').parent().attr('class', 'checkmark10');
+                                              $('#ringettePath').css({'stroke': color});
+                                              $('#ringettePath').css('fill', function () { if (isIE) return color; else return 'none'; });
+                                          }
+                                          else {
+                                              $('#ringettePath').parent().attr('class', '');
+                                              var t = textures.paths()
+                                                  .d("woven")
+          										.background("white")
+                                                  .size(30)
+                                                  .thicker();
+                                              svg.call(t);
+                                              color = t.url();
+                                              $('#ringettePath').css('fill', color);
+                                              $('#ringettePath').css({'stroke': '#343434'});
+                                          }
+                                          break;
+                                      case 'Rugby':
+                                          if (!aView) {
+                                              color = '#8c564b';
+                                              $('#rugbyPath').parent().attr('class', 'checkmark11');
+                                              $('#rugbyPath').css({'stroke': color});
+                                              $('#rugbyPath').css('fill', function () { if (isIE) return color; else return 'none'; });
+                                          }
+                                          else {
+                                              $('#rugbyPath').parent().attr('class', '');
+                                              color = '#343434';
+                                              $('#rugbyPath').css('fill', color);
+                                              $('#rugbyPath').css({'stroke': '#343434'});
+                                          }
+                                          break;
+                                      case 'SleddingTobogganing':
+                                          if (!aView) {
+                                              color = '#c49c94';
+                                              $('#sleddingPath').parent().attr('class', 'checkmark12');
+                                              $('#sleddingPath').css({'stroke': color});
+                                              $('#sleddingPath').css('fill', function () { if (isIE) return color; else return 'none'; });
+                                          }
+                                          else {
+                                              $('#sleddingPath').parent().attr('class', '');
+                                              color = '#fff';
+                                              $('#sleddingPath').css('fill', color);
+                                              $('#sleddingPath').css({'stroke': '#343434'});
+                                          }
+                                          break;
+                                      case 'Soccer':
+                                          if (!aView) {
+                                              color = '#e377c2';
+                                              $('#soccerPath').parent().attr('class', 'checkmark13');
+                                              $('#soccerPath').css({'stroke': color});
+                                              $('#soccerPath').css('fill', function () { if (isIE) return color; else return 'none'; });
+                                          }
+                                          else {
+                                              $('#soccerPath').parent().attr('class', '');
+                                              var t = textures.lines()
+                                                  .orientation("vertical", "horizontal")
+                                                  .size(20)
+          										.background("white")
+                                                  .strokeWidth(1.5);
+                                              svg.call(t);
+                                              color = t.url();
+                                              $('#soccerPath').css('fill', color);
+                                              $('#soccerPath').css({'stroke': '#343434'});
+                                          }
+                                          break;
+                                  }
+                                  return color;
+                              }
+                          })
+                          .style('stroke', function () {
+                              if (aView)
+                                  return '#343434';
+                              })
+                          .transition()
+                          .duration(config.duration || 550)
+                          .attrTween('d', tweenPie);
+						  // The following code adds the value of the slice (in percentile) in a html text tag.
+						  // The code also computes where the html tag needs to be moved depending on the relative sizes.
+          				groups.append('text').text(function(d,i) {
+          				    var text = parseInt(Math.round((d.value/sum)*100)) + '%';
+          				    if (sizeMultiplier >= .37)
+          				        $(this).show();
+          				    if (d.data.count == 0)
+          				        return "";
+          				    else
+          				        return text;
+                          })
+          				.style({'font-weight': 'bold',
+          						'font-family': '"Helvetica Neue",Helvetica,Arial,sans-serif',
+          						'font-size': '14px'})
+          				.attr('class', 'sliceVal')
+                          .attr({"y": function(d,i) {
+                              var mid = (d.endAngle - d.startAngle)/2;
+                              mid = d.startAngle + mid;
+                              return ((Math.cos(mid) * 140) * -1)* sizeMultiplier;
+                          }})
+                          .attr({"x": function(d,i) {
+              				var x = 0;
+              				var mid = (d.endAngle - d.startAngle)/2;
+              				mid = d.endAngle - mid;
+                              return ((Math.sin(mid) * 140)) *sizeMultiplier; 
+              			}})
+          				.attr({"transform": function(d,i) {
+          					var numChars = (parseInt(Math.round((d.value/sum)*100)) + '%').length;
+          					var width = 0;
+          					if (numChars == 2)
+          						width = 18;
+          					else if (numChars == 3)
+          						width = 26;
+          					else
+          						width = 35;
+          					var widthOffset = width/2.0 * -1.0;
+          					return 'translate(' + widthOffset + ',' + 6  + ')';
+          				}})
+          				.style("fill", function(d){
+          				    if (!aView)
+          				        return '#fff';
+          				    else {
+                                  var id = $(this).parent().find('path').first().attr('id');
+                                  if (id === "Basketball" || id === "Childrens Active Games" || id === "Rugby" || id === "Ice Hockey" || id === "Playground Equipment")
+                                      return '#fff';
+                                  else if (id === "Ice Skating" || id === "Ringette" || id === "Soccer" || id === "Cheerleading" || id === "Bicycling" || id === "Football" || id === "SleddingTobogganing")
+                                      return '#343434';
+                                  else
+                                      return '#fff';
+          				    }
+                          })
+          				.call(getTextBox);
+						// In accessibility view, the following code adds a background to each pie chart slice percentage.
+          				groups.insert("rect","text")
+          				.attr('class','bgText')
+                          .attr({"y": function(d,i) {
+                              var mid = (d.endAngle - d.startAngle)/2;
+                              mid = d.startAngle + mid;
+                              return ((Math.cos(mid) * 140) * -1)* sizeMultiplier;
+                          }})
+                          .attr({"x": function(d,i) {
+              				var x = 0;
+              				var mid = (d.endAngle - d.startAngle)/2;
+              				mid = d.endAngle - mid;
+                              return ((Math.sin(mid) * 140)) *sizeMultiplier; 
+              			}})
+          				.attr({"transform": function(d,i) {
+          					var numChars = (parseInt(Math.round((d.value/sum)*100)) + '%').length;
+          					var width = 0;
+          					if (numChars == 2)
+          						width = 18;
+          					else if (numChars == 3)
+          						width = 26;
+          					else
+          						width = 35;
+          					var widthOffset = width/2.0 * -1.0;
+          					return 'translate(' + widthOffset+ ',' + -6 + ')';
+          				}})
+                          .attr("width", function(d){return d.bbox.width})
+                          .attr("height", function(d){return d.bbox.height})
+                          .style("fill", function(d){
+						  // This fill function determines which colour should be chosen for the background depending on the current sport.
+                              if (sizeMultiplier < .37) {
+                                  $(this).parent().find('.sliceVal').first().hide();
+                                  $(this).hide();
+                              }
+                              if (!aView)
+                                  $(this).hide();
+                              else {
+                              var id = $(this).parent().find('path').first().attr('id');
+                              if (id === "Basketball" || id === "Childrens Active Games" || id === "Rugby" || id === "Ice Hockey" || id === "Playground Equipment")
+                                  return '#343434';
+                              else if (id === "Ice Skating" || id === "Ringette" || id === "Cheerleading" || id === "Soccer" || id === "Bicycling" || id === "Football" || id === "SleddingTobogganing")
+                                  return '#fff';
+                              else
+                                  return '#888';
+                              }
+                          });
+          				
+          			function getTextBox(s) {
+          			    s.each(function (d) { d.bbox = this.getBBox();});
+          			}
+          
+                      // Add the total sum of injuries to the center of the pie
+                      var centerVal = svg.select('g.arc')
+                          .append('g')
+                          .attr({
+                              'class': 'centerValue'
+                          })
+                          .append('text')
+                          .text(sum);
+          				svg.select('.centerValue text').style({'font-weight': 'bold',
+          						'font-family': '"Helvetica Neue",Helvetica,Arial,sans-serif',
+          						'font-size': '20px'});
+					// digits and widthOffset estimate the width and middle of the center value text.
+          			var digits = $(config.el + ' .centerValue text').text().length;
+          			var width = 0;
+          			switch (digits) {
+          				case 1:
+          				width = 11.12;
+          				break;
+          				case 2:
+          				width = 22.24;
+          				break;
+          				case 3:
+          				width = 33.36;
+          				break;
+          				case 4:
+          				width = 44.48;
+          				break;
+          			}
+                      var widthOffset = width/2.0 * -1.0;
+                      svg.select('g .centerValue').attr({
+          				'transform': function() {
+          					if (sizeMultiplier < .22)
+          						return 'translate(' + widthOffset + ',' + -55 + ')';
+          					else
+          						return 'translate(' + widthOffset + ',' + 8 + ')';
+          				}
+          			});
+					// The following code adds labels to the svg div when the pie chart is too small
+					// for the slice value text to fit.
+          			var text = svg.select(".labels").selectAll("text")
+          			.style({'font-weight': 'bold',
+          						'font-family': '"Helvetica Neue",Helvetica,Arial,sans-serif',
+          						'font-size': (14 * (1/sizeMultiplier)) + 'px'})
+              		.data(pie(config.data));
+              
+                  	text.enter()
+                  		.append("text")
+                  		.attr("dy", ".35em")
+          				.style({"font-size": 1/sizeMultiplier + "em",'font-weight': 'bold',
+          						'font-family': '"Helvetica Neue",Helvetica,Arial,sans-serif'})
+                  		.text(function(d) {
+                  		    var centerDiv = $(this).parent().parent().find('.centerValue')[0];
+                  		    var centerVal = $(centerDiv).text();
+                  		    var multi = centerVal/sumMax;
+                  		    if (d.data.count != 0 && multi < .37) 
+                  		        return parseInt(Math.round((d.value/sum)*100)) + '%';
+                  		});
+              
+                  	text.attr("transform", function(d) {
+                  		    var centerDiv = $(this).parent().parent().find('.centerValue')[0];
+                  		    var centerVal = $(centerDiv).text();
+                  		    var multi = centerVal/sumMax;
+                  		    if (d.data.count != 0 && multi < .37) {
+          						var pos = outerArc.centroid(d);
+          						pos[0] = radius * 1.2 * (midAngle(d) < Math.PI ? 1 : -1);
+          						return "translate("+ pos +")";
+                  		    }
+                  		})
+                  		.style("text-anchor", function(d){
+                  		    var centerDiv = $(this).parent().parent().find('.centerValue')[0];
+                  		    var centerVal = $(centerDiv).text();
+                  		    var multi = centerVal/sumMax;
+                  		    if (d.data.count != 0 && multi < .37) {
+                      			return midAngle(d) < Math.PI ? "start":"end";
+                  		    }
+                  		});
+                  
+          
+          			// The following code adds lines from the center of each pie chart slice
+					// to their corresponding label when the pie chart is too small to fix the text.
+          			var polyline = svg.select(".lines").selectAll("polyline")
+                  		.data(pie(config.data));
+                  	
+                  	polyline.enter()
+                  		.append("polyline");
+          				
+                  	polyline.style('stroke-width', 2 * 1/sizeMultiplier);
+                  
+                  	polyline.attr("points", function(d){
+                  		    var centerDiv = $(this).parent().parent().find('.centerValue')[0];
+                  		    var centerVal = $(centerDiv).text();
+                  		    var multi = centerVal/sumMax;
+                  		    if (d.data.count != 0 && multi < .37) {
+                  				var pos = outerArc.centroid(d);
+                  				pos[0] = radius * 1.2*  (midAngle(d) < Math.PI ? 1 : -1);
+                  				return [arc.centroid(d), outerArc.centroid(d), pos];
+                  		    }
+                  		});
+                  	
+                  	// Hide lines and labels if relative size is off.
+                  	if (!notRel) {
+                  	    $('.lines').hide();
+                  	    $('.labels').hide();
+                  	}
+                  }
+          
+				// selectionChanged() is executed when an item on the legend is clicked.
+                  function selectionChanged(e) {
+          			$('#imageDownload').attr('disabled', true);
+                      $('.checkmark__check_load').attr('class', 'checkmark__check');
+                      lastControl = "legend";
+                      if (e != null)
+                          lastClick = e[0].value;
+                      var checked = $("input:checkbox:checked");
+                      var checkArr = [];
+                      for (var i = 0; i < checked.length; i++)
+                          checkArr.push(checked[i].value);
+                      sm1 = JSON.parse(JSON.stringify(sports_m_0509));
+                      sm2 = JSON.parse(JSON.stringify(sports_m_1014));
+                      sm3 = JSON.parse(JSON.stringify(sports_m_1519));
+                      sf1 = JSON.parse(JSON.stringify(sports_f_0509));
+                      sf2 = JSON.parse(JSON.stringify(sports_f_1014));
+                      sf3 = JSON.parse(JSON.stringify(sports_f_1519));
+                      var copyArr = [sm1, sm2, sm3, sf1, sf2, sf3];
+                      for (var i = 0; i < copyArr.length; i++) {
+                          for (var j = 0; j < copyArr[i].length; j++) {
+                              if (checkArr.indexOf(copyArr[i][j].dept) == -1) {
+                                  copyArr[i][j].count = 0;
+                              }
+                          }
+                      }
+                      var sum1 = d3.round(d3.sum(sm1, function(d) {
+                          return d.count;
+                      }));
+                      var sum2 = d3.round(d3.sum(sm2, function(d) {
+                          return d.count;
+                      }));
+                      var sum3 = d3.round(d3.sum(sm3, function(d) {
+                          return d.count;
+                      }));
+                      var sum4 = d3.round(d3.sum(sf1, function(d) {
+                          return d.count;
+                      }));
+                      var sum5 = d3.round(d3.sum(sf2, function(d) {
+                          return d.count;
+                      }));
+                      var sum6 = d3.round(d3.sum(sf3, function(d) {
+                          return d.count;
+                      }));
+                      var sumArray = [sum1, sum2, sum3, sum4, sum5, sum6];
+                      sumMax = d3.max(sumArray);
+					  // transitionRingChart() is executed with the selected items from the legend
+					  // for each svg on the webpage.
+                      transitionRingChart({
+                          el: '#sports_m_0509.animated-ring svg',
+                          outerRadius: outerRadius,
+                          innerRadius: outerRadius - ringWidth,
+                          data: sm1
+                      });
+                     transitionRingChart({
+                          el: '#sports_m_1014.animated-ring svg',
+                          outerRadius: outerRadius,
+                          innerRadius: outerRadius - ringWidth,
+                          data: sm2
+                      });
+                      transitionRingChart({
+                          el: '#sports_m_1519.animated-ring svg',
+                          outerRadius: outerRadius,
+                          innerRadius: outerRadius - ringWidth,
+                          data: sm3
+                      });
+                      transitionRingChart({
+                          el: '#sports_f_0509.animated-ring svg',
+                          outerRadius: outerRadius,
+                          innerRadius: outerRadius - ringWidth,
+                          data: sf1
+                      });
+                      transitionRingChart({
+                          el: '#sports_f_1014.animated-ring svg',
+                          outerRadius: outerRadius,
+                          innerRadius: outerRadius - ringWidth,
+                          data: sf2
+                      });
+                      transitionRingChart({
+                          el: '#sports_f_1519.animated-ring svg',
+                          outerRadius: outerRadius,
+                          innerRadius: outerRadius - ringWidth,
+                          data: sf3
+                      });
+					 
+					 // The following code in selectionChanged() is executed after the transition
+					 // animations because the calculations for relative size can only be made after
+					 // the transitions are finished and the correct values are retrieved.
+          			var path = d3.selectAll('.animated-ring svg').selectAll('g path')
+                          .each(function(d) {
+          					var svg = $(this).parent().parent();
+          					var sum = $(svg).find('.centerValue text')[0];
+          					var slice = $(this).parent().find('.sliceVal').first();
+          					sum = $(sum).text();
+          					var text = $('.centerValue text');
+          					var max = 0;
+          					for (var i = 0; i < text.length; i++) {
+          						if (parseInt($(text[i]).text()) > max)
+          							max = parseInt($(text[i]).text());
+          					}
+          					if (!notRel)
+          						multi = 0.9;
+          					else
+          						multi = sum/max;
+          					$(slice).text(function() {
+          					    if (d.data.count != 0 && multi >= .37)
+          					        $(this).show('slow');
+          					   else
+          					        $(this).hide();
+          					   if (d.data.count != 0)
+          					    return parseInt(Math.round((d.value/sum)*100)) + '%';
+          					   else {
+          					   $(this).parent().find('rect').first().hide();
+          					    return "";
+          					   }
+          					});
+          					var sliceVal = $(slice).text();
+          					if (sliceVal.length > 0) {
+          						$(slice).attr({"y": function() {
+          								var mid = (d.endAngle - d.startAngle)/2;
+          								mid = d.startAngle + mid;
+          								return ((Math.cos(mid) * 140) * -1) * multi; 
+          							}});
+          						$(slice).attr({"x": function() {
+          								var mid = (d.endAngle - d.startAngle)/2;
+          								mid = d.endAngle - mid;
+          								return ((Math.sin(mid) * 140)) * multi; 
+          						}});
+          						$(slice).attr({"transform": function() {
+          							var numChars = sliceVal.length;
+          							var width = 0;
+          							if (numChars == 2)
+          								width = 18;
+          							else if (numChars == 3)
+          								width = 26;
+          							else
+          								width = 35;
+          							var widthOffset = width/2.0 * -1.0;
+          							return 'translate(' + widthOffset + ',' + 6 + ')';
+          						}});
+          						var rect = $(this).parent().find('rect').first();
+          						rect.attr({"y": function() {
+          							$(rect).hide();
+          							if (d.data.count != 0 && multi >= .37 && aView)
+          								$(rect).show();
+          							var mid = (d.endAngle - d.startAngle)/2;
+          							mid = d.startAngle + mid;
+          							return ((Math.cos(mid) * 140) * -1)* multi;
+          						}})
+          						rect.attr({"x": function() {
+          							var x = 0;
+          							var mid = (d.endAngle - d.startAngle)/2;
+          							mid = d.endAngle - mid;
+          							return ((Math.sin(mid) * 140)) *multi; 
+          						}})
+          						rect.attr('width', function() {
+          							return $(this).parent().find('.sliceVal').first().width();
+          						})
+          						rect.attr({"transform": function() {
+          							var numChars = $(this).parent().find('.sliceVal').first().text().length;
+          							var width = 0;
+          							if (numChars == 2)
+          								width = 18;
+          							else if (numChars == 3)
+          								width = 26;
+          							else
+          								width = 35;
+          							var widthOffset = width/2.0 * -1.0;
+          							return 'translate(' + widthOffset + ',' + -6 + ')';
+          						}})
+          						if (!aView)
+          							$(slice).css('fill', '#fff');
+          					}
+          				});
+          				
+          				var label = d3.selectAll('.animated-ring svg .labels').selectAll('text')
+                          .each(function(d) {
+                      		$(this).text(function() {
+                      		    var centerDiv = $(this).parent().parent().find('.centerValue')[0];
+                      		    var centerVal = $(centerDiv).text();
+                      		    var multi = centerVal/sumMax;
+                      		    if (d.data.count != 0 && multi < .37) {
+          							$(this).show('slow');
+                      		        return parseInt(Math.round((d.value/centerVal)*100)) + '%';
+          							}
+                      		    else
+                      		        return "";
+                      		});
+                          });
+                          
+                          var polyline = d3.selectAll('.animated-ring svg .lines').selectAll('polyline')
+                          .each(function(d) {
+                  		    var centerDiv = $(this).parent().parent().find('.centerValue')[0];
+                  		    var centerVal = $(centerDiv).text();
+                  		    var multi = centerVal/sumMax;
+                  		    if (d.data.count == 0 || multi >= .37)
+                  		        $(this).remove();
+          					else
+          						$(this).show('slow');
+                          });
+          				
+          			setTimeout(function() {
+          				lineAdjust();
+          			}, 550);
+                  }
+				  
+				   // transitionRingChart() is called from selectionChanged() and is passed
+				   // the data objects for each svg item. This function controls the animation
+				   // when a selection is changed in the legend.
+                  function transitionRingChart(config) {
+                      var pie = d3.layout.pie().value(function(d) {
+                          return d.count;
+                      });
+                      
+                      var radius = 180;
+          
+                      var arc = d3.svg.arc();
+                      var outerArc = d3.svg.arc()
+          	            .innerRadius(radius * 1.2)
+                      	.outerRadius(radius * 1.2);
+                      
+                      function midAngle(d){
+          		        return d.startAngle + (d.endAngle - d.startAngle)/2;
+          	        }
+          
+                      sum = d3.round(d3.sum(config.data, function(d) {
+                          return d.count;
+                      }));
+          			
+                      if(notRel)
+                          sizeMultiplier = sum/sumMax;
+                      else
+                          sizeMultiplier = 0.9;
+          				
+          			if(sum == 0)
+          				var sizeMultiplier = 1;
+                          
+                      arc.outerRadius(config.outerRadius || outerRadius)
+                          .innerRadius(config.innerRadius || innerRadius);
+          
+                      var svg = d3.select(config.el)
+                          .attr({
+                              width: maxWidth,
+                              height: maxHeight
+                          });
+          
+                      var path = svg.selectAll('g path')
+                          .each(function(d) {
+                              this._current = d;
+                          })
+          				.attr('transform', 'scale(' + sizeMultiplier + ')')
+          				.style('transform', 'scale(' + sizeMultiplier + ')');
+          
+                      path = path.data(pie(config.data)); // update the data
+                      // set the start and end angles to Math.PI * 2 so we can transition
+                      // anticlockwise to the actual values later
+                      path.enter().append("path")
+                          .attr("d", arc(enterAntiClockwise))
+                          .each(function(d) {
+                              this._current = {
+                                  data: d.data,
+                                  value: d.value,
+                                  startAngle: enterAntiClockwise.startAngle,
+                                  endAngle: enterAntiClockwise.endAngle
+                              };
+                          });
+                          path.transition().duration(550).attrTween("d", arcTween);
+          
+                      svg.select('.centerValue text').text(sum)
+          			svg.selectAll('.sliceVal')
+                          .style('fill', function(d) {
+          				    if (sizeMultiplier < .37)
+          				        return '#343434';
+          				    else {
+                                  var id = $(this).parent().find('path').first().attr('id');
+                                  if (id === "Basketball" || id === "Childrens Active Games" || id === "Rugby" || id === "Ice Hockey" || id === "Playground Equipment")
+                                      return '#fff';
+                                  else if (id === "Ice Skating" || id === "Ringette" || id === "Cheerleading" || id === "Soccer" || id === "Bicycling" || id === "Football" || id === "SleddingTobogganing")
+                                      return '#343434';
+                                  else
+                                      return '#fff';
+          				    }
+          				})
+                          .attr({"y": function(d) {
+                              var mid = (d.endAngle - d.startAngle)/2;
+                              mid = d.startAngle + mid;
+                              return ((Math.cos(mid) * 140) * -1)* sizeMultiplier; 
+                          }})
+                          .attr({"x": function(d) {
+              				var x = 0;
+              				var mid = (d.endAngle - d.startAngle)/2;
+              				mid = d.endAngle - mid;
+                              return ((Math.sin(mid) * 140)) *sizeMultiplier; 
+              			}});
+              		svg.selectAll('.textBg')
+          			.attr('transform', 'scale(' + sizeMultiplier + ')')
+                          .attr({"y": function(d) {
+                              var mid = (d.endAngle - d.startAngle)/2;
+                              mid = d.startAngle + mid;
+                              return ((Math.cos(mid) * 140) * -1)* sizeMultiplier; 
+                          }})
+                          .attr({"x": function(d) {
+              				var x = 0;
+              				var mid = (d.endAngle - d.startAngle)/2;
+              				mid = d.endAngle - mid;
+                              return ((Math.sin(mid) * 140)) *sizeMultiplier; 
+              			}});
+                      var digits = $(config.el + ' .centerValue text').text().length;
+          			var width = 0;
+          			switch (digits) {
+          				case 1:
+          				width = 11.12;
+          				break;
+          				case 2:
+          				width = 22.24;
+          				break;
+          				case 3:
+          				width = 33.36;
+          				break;
+          				case 4:
+          				width = 44.48;
+          				break;
+          			}
+                      var widthOffset = width/2.0 * -1.0;
+          			svg.select('g .centerValue').attr({
+          				'transform': function () {
+          				    if (sizeMultiplier < .22)
+          				        return 'translate(' + widthOffset + ',' + -55 + ')';
+          				    else
+          				        return 'translate(' + widthOffset + ',' + 8 + ')';
+          				}
+          			});
+					
+					// arcTween() interpolates the start and end angles of a pie chart slice
+					// so that all pie slices collapse/expand smoothly.
+                      function arcTween(a) {
+          			if (isNaN(a.startAngle))
+          				a.startAngle = 0;
+          			if (isNaN(a.endAngle))
+          				a.endAngle = 0;
+          				if (a.startAngle == 0 && lastClick == this._current.data.dept && this._current.data.count == 0) {
+          					//console.log("a");
+          					var i = d3.interpolate({startAngle: 0, endAngle:0}, a);
+          				}
+          				else if (this._current.startAngle == 0 && lastClick == this._current.data.dept && this._current.data.count != 0) {
+          					//console.log("b");
+          					var i = d3.interpolate(this._current, {startAngle: 0, endAngle:0});
+          				}
+          				else if (lastClick == this._current.data.dept && this._current.data.count != 0) {
+          					//console.log("c");
+          					var i = d3.interpolate(this._current, {startAngle: prevStart, endAngle: prevStart});
+          				}
+          				else if (lastClick == this._current.data.dept && this._current.data.count == 0) {
+          					//console.log("d");
+          					var i = d3.interpolate({startAngle: prevEnd, endAngle: prevEnd}, a);
+          				}
+          				else {
+          					//console.log("e");
+          					var i = d3.interpolate(this._current, a);
+          				}
+          			   
+          			   if (a.endAngle < 6.28 || this._current.endAngle < 6.28) {
+          				prevStart = a.endAngle;
+          				prevEnd = this._current.endAngle;
+          			   }
+          				this._current = i(0);
+          				return function(t) {
+          					return arc(i(t));
+          				};
+                      }
+          			
+					// prevMulti retrieves the previous size multiplier from the transform attribute.
+          			var prevMulti = svg.select(".lines").attr('transform');
+          			prevMulti = prevMulti.split(' ');
+          			prevMulti = prevMulti[1].slice(6,-1);
+          			
+          			svg.select(".labels").attr('transform', 'translate(180,180) scale(' + sizeMultiplier + ')')
+                      var text = svg.select(".labels").selectAll("text")
+          			.style("font-size", (14 * 1/sizeMultiplier) + "px")
+              		.data(pie(config.data));
+              
+                  	text.enter()
+                  		.append("text")
+                  		.attr("dy", ".35em");
+              
+                  	text.attr("transform", function(d) {
+          				if (prevMulti != sizeMultiplier) {
+          					$(this).hide();
+          				}
+          				if ($(this).parent().parent().find('#' + lastClick).length > 0 || prevMulti != sizeMultiplier)
+          					$(this).parent().parent().find('.sliceVal').hide();
+          					if (!isNaN(d.endAngle)) {
+          						var pos = outerArc.centroid(d);
+          						pos[0] = radius * 1.2 * (midAngle(d) < Math.PI ? 1 : -1);
+          						return "translate("+ pos +")";
+          					}
+                  		})
+                  		.style("text-anchor", function(d){
+          					if (!isNaN(d.endAngle)) {
+          						return midAngle(d) < Math.PI ? "start":"end";
+          					}
+                  		});
+          
+          			svg.select(".lines").attr('transform', 'translate(180,180) scale(' + sizeMultiplier + ')');
+          			var polyline = svg.select(".lines").selectAll("polyline")
+                  		.data(pie(config.data));
+          			
+                  	polyline.enter()
+                  		.append("polyline");
+          				
+          			polyline.style('stroke-width', 2 * 1/sizeMultiplier);
+                  
+                  	polyline.attr("points", function(d){
+          			if (prevMulti != sizeMultiplier)
+          					$(this).hide();
+          				if (!isNaN(d.endAngle)) {
+          					var pos = outerArc.centroid(d);
+          					pos[0] = radius * 1.2 * (midAngle(d) < Math.PI ? 1 : -1);
+          					return [arc.centroid(d), outerArc.centroid(d), pos];
+          				}
+          			});
+                  	
+                  }
+                  
+				  // disableRel() is the function called when the relative size toggle is switched off.
+                  function disableRel() {
+                      $('.lines').hide();
+                      $('.labels').hide();
+                      $('.sliceVal').hide();
+          			$('.sliceVal').show('slow');
+                      if (aView)
+                          $('.bgText').show();
+                      var rings = d3.selectAll('.animated-ring');
+          			d3.selectAll('g.arc path').style('transform', 'scale(0.9)');
+          			d3.selectAll('g.arc path').attr('transform', 'scale(0.9)');
+          			var text = $('.centerValue text');
+                      var max = 0;
+                      for (var i = 0; i < text.length; i++) {
+                          if (parseInt($(text[i]).text()) > max)
+                              max = parseInt($(text[i]).text());
+                      }
+                      rings = rings[0];
+                      for (var i = 0; i < rings.length; i++) {
+                          var svg = $(rings[i]).find('svg')[0];
+                          var text = $(svg).find('.centerValue text')[0];
+          				var svgScale = $(text).text()/max;
+                          var cVal = $(svg).find('.centerValue')[0];
+          				$(cVal).attr({"transform": function() {
+          						var numChars = $(cVal).text().length;
+          						var width = 0;
+          						if (numChars == 2)
+          							width = 22.24;
+          						else if (numChars == 3)
+          							width = 33.36;
+          						else
+          							width = 44.48;
+          						var widthOffset = width/2.0 * -1.0;
+          						return 'translate(' + widthOffset + ',8)';
+          						}});
+          				var sliceVal = $(svg).find('.sliceVal');
+          				for (var j = 0; j < sliceVal.length; j++) {
+          					$(sliceVal[j]).attr({"y": function() {
+          						return $(sliceVal[j]).attr('y') * (0.9/svgScale); 
+          					}});
+          					$(sliceVal[j]).attr({"x": function() {
+          						return $(sliceVal[j]).attr('x') * (0.9/svgScale); 
+          					}});
+          					$(sliceVal[j]).attr({"transform": function() {
+          						var numChars = $(sliceVal[j]).text().length;
+          						var width = 0;
+          						if (numChars == 2)
+          							width = 18;
+          						else if (numChars == 3)
+          							width = 26;
+          						else
+          							width = 35;
+          						var widthOffset = width/2.0 * -1.0;
+          						return 'translate(' + widthOffset + ',6)';
+          						}});
+          					$(sliceVal[j]).css('fill', function() {
+          					    if (aView) {
+                                      var id = $(sliceVal[j]).parent().find('path').first().attr('id');
+                                      if ($(sliceVal[j]).parent().find('.sliceVal').first().text() === "")
+                                          $(sliceVal[j]).parent().find('.bgText').first().hide();
+                                      if (id === "Basketball" || id === "Childrens Active Games" || id === "Rugby" || id === "Ice Hockey" || id === "Playground Equipment")
+                                          return '#fff';
+                                      else if (id === "Ice Skating" || id === "Ringette" || id === "Cheerleading" || id === "Soccer" || id === "Bicycling" || id === "Football" || id === "SleddingTobogganing")
+                                          return '#343434';
+                                      else
+                                          return '#fff';
+          					    }
+          					    else
+          					        return "#fff";
+          				})
+          				}
+          				var rect = $(svg).find('.bgText');
+          				for (var j = 0; j < rect.length; j++) {
+          					$(rect[j]).attr({"y": function() {
+          						return $(rect[j]).attr('y') * (0.9/svgScale); 
+          					}});
+          					$(rect[j]).attr({"x": function() {
+          						return $(rect[j]).attr('x') * (0.9/svgScale); 
+          					}});
+          					$(rect[j]).attr({"transform": function() {
+          						var numChars = $(rect[j]).parent().find('.sliceVal').first().text().length;
+          						var width = 0;
+          						if (numChars == 2)
+          							width = 18;
+          						else if (numChars == 3)
+          							width = 26;
+          						else
+          							width = 35;
+          						var widthOffset = width/2.0 * -1.0;
+          						return 'translate(' + widthOffset + ',-6)';
+          						}});
+          				}
+                      }
+                      lastControl = "relativeSize";
+                  }
+				  
+				  // enableRel() is the function called when the relative size toggle is switched on.
+                  function enableRel() {
+                      $('.lines').show();
+                      $('.labels').show();
+                      var rings = d3.selectAll('.animated-ring');
+                      var text = $('.centerValue text');
+                      var max = 0;
+                      for (var i = 0; i < text.length; i++) {
+                          if (parseInt($(text[i]).text()) > max)
+                              max = parseInt($(text[i]).text());
+                      }
+                      rings = rings[0];
+                      for (var i = 0; i < rings.length; i++) {
+                          var svg = $(rings[i]).find('svg')[0];
+                          var text = $(svg).find('.centerValue text')[0];
+                          var sum = $(text).text();
+                          var multi = sum/max;
+                          if (multi < .37) {
+                              $(svg).find('.sliceVal').hide();
+                              $(svg).find('.bgText').hide();
+                          }
+                          $(svg).find('polyline').css('stroke-width', 2 * 1/multi);
+                          $(svg).find('.labels text').css('font-size', 1/multi + 'em');
+          				  $(svg).find('.lines').attr('transform', 'translate(180,180) scale(' + multi + ')');
+          				  $(svg).find('.labels').attr('transform', 'translate(180,180) scale(' + multi + ')');
+                          var digits = $(text).text().length;
+          				var width = 0;
+          				switch (digits) {
+          					case 1:
+          					width = 11.12;
+          					break;
+          					case 2:
+          					width = 22.24;
+          					break;
+          					case 3:
+          					width = 33.36;
+          					break;
+          					case 4:
+          					width = 44.48;
+          					break;
+          				}
+          				var widthOffset = width/2.0 * -1.0;
+                          var cVal = $(svg).find('.centerValue')[0];
+                          $(cVal).attr('transform',function () {
+          				    if (multi < .22)
+          				        return 'translate(' + widthOffset + ',' + -55 + ')';
+          				    else
+          				        return 'translate(' + widthOffset + ',' + 8 + ')';
+          					});
+          				var sliceVal = $(svg).find('.sliceVal');
+          				for (var j = 0; j < sliceVal.length; j++) {
+          					$(sliceVal[j]).attr({"y": function() {
+          						return ($(sliceVal[j]).attr('y')/.9) * multi;
+          					}});
+          					$(sliceVal[j]).attr({"x": function() {
+          						return ($(sliceVal[j]).attr('x')/.9) * multi;
+          					}});
+          					$(sliceVal[j]).attr({"transform": function() {
+          						var numChars = $(sliceVal[j]).text().length;
+          						var width = 0;
+          						if (numChars == 2)
+          							width = 18;
+          						else if (numChars == 3)
+          							width = 26;
+          						else
+          							width = 35;
+          						var widthOffset = width/2.0 * -1.0;
+          				    	return 'translate(' + widthOffset + ',' + 6 + ')';
+          						}});
+          				}
+          				var rect = $(svg).find('.bgText');
+          				for (var j = 0; j < rect.length; j++) {
+          					$(rect[j]).attr({"y": function() {
+          						return $(rect[j]).parent().find('.sliceVal').first().attr('y');
+          					}});
+          					$(rect[j]).attr({"x": function() {
+          						return $(rect[j]).parent().find('.sliceVal').first().attr('x');
+          					}});
+          					$(rect[j]).attr({"transform": function() {
+          						var numChars = $(rect[j]).parent().find('.sliceVal').first().text().length;
+          						var width = 0;
+          						if (numChars == 2)
+          							width = 18;
+          						else if (numChars == 3)
+          							width = 26;
+          						else
+          							width = 35;
+          						var widthOffset = width/2.0 * -1.0;
+          						return 'translate(' + widthOffset + ',' + -6 + ')';
+          						}});
+          				}
+                      }
+          			d3.selectAll('g.arc path').each(function(d) {
+          				$(this).css('transform', 'scale(' + ($(this).parent().parent().find('.centerValue text').text()/max) + ')');
+          				$(this).attr('transform', 'scale(' + ($(this).parent().parent().find('.centerValue text').text()/max) + ')');
+          			});
+                      lastControl = "relativeSize";
+          			
+          			setTimeout(function() {
+          				lineAdjust();
+          			}, 550);
+                  }
+          
+                  // ConvertToCSV() is called when the Download (.csv) button is clicked,
+				  // and converts each object (svg data) into text that can be loaded into
+				  // a Microsoft Excel file.
+                  function ConvertToCSV(objArray, title) {
+                      var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
+                      var str = '';
+                      for (var i = 0; i < array.length; i++) {
+                          var line = '';
+          				
+                          for (var index in array[i]) {
+                              if (line != '') line += ','
+          						line += array[i][index];
+          					
+                          }
+          				if (line.split(',')[1] != 0)
+          					str += title + ',' + line + '\r\n';
+                      }
+                      return str;
+                  }
+          		
+				// download() generates an image of the entire visual component of the webpage
+				// by converting each svg into a data string and adding them to an html canvas
+				// which is then saved as an image to the Download (.png) button. The timeout
+				// is necessary to ensure that all images are loaded into the canvas.
+          		function download() {
+          			var svg1, svg2, svg3, svg4, svg5, svg6;
+          			svgAsPngUri(document.getElementById("svg1"), {}, function (uri) {
+          				svg1 = uri;
+          				image1 = new Image();
+          				image1.src = svg1;
+          				legend = new Image();
+          				if (aView)
+          					legend.src = 'img/aLegend.png';
+          				else
+          					legend.src = 'img/legend.png';
+          			});
+          			svgAsPngUri(document.getElementById("svg2"), {}, function (uri) {
+          				svg2 = uri;
+          				image2 = new Image();
+          				image2.src = svg2;
+          			});
+          			svgAsPngUri(document.getElementById("svg3"), {}, function (uri) {
+          				svg3 = uri;
+          				image3 = new Image();
+          				image3.src = svg3;
+          			});
+          			svgAsPngUri(document.getElementById("svg4"), {}, function (uri) {
+          				svg4 = uri;
+          				image4 = new Image();
+          				image4.src = svg4;
+          			});
+          			svgAsPngUri(document.getElementById("svg5"), {}, function (uri) {
+          				svg5 = uri;
+          				image5 = new Image();
+          				image5.src = svg5;
+          			});
+          			svgAsPngUri(document.getElementById("svg6"), {}, function (uri) {
+          				svg6 = uri;
+          				image6 = new Image();
+          				image6.src = svg6;
+          				$('#preview').html('<canvas id="downloadImage" width="1145" height="931"></canvas>');
+          				setTimeout(function(){
+          					var canvas = document.getElementById('downloadImage');
+          					var ctx = canvas.getContext("2d");
+          					ctx.drawImage(image1,65,80);
+          					ctx.drawImage(image2,425,80);
+          					ctx.drawImage(image3,785,80);
+          					ctx.drawImage(image4,65,440);
+          					ctx.drawImage(image5,425,440);
+          					ctx.drawImage(image6,785,440);
+          					ctx.drawImage(legend,298,800);
+          					ctx.font = "20px Helvetica Neue, sans-serif";
+          					ctx.fillText("Male",0,265);
+          					ctx.fillText("Female",0,625);
+          					ctx.fillText("Ages 5-9",205,65);
+          					ctx.fillText("Ages 10-14",555,65);
+          					ctx.fillText("Ages 15-19",915,65);
+          					ctx.fillText("Top 5 Sports and Recreational Activities Responsible for Concussion and Other Brain Injury Related Hospital Visits", 65, 20);
+          					var imageDownload = document.getElementById('imageDownload');
+          					imageDownload.href = canvas.toDataURL();
+          					imageDownload.download = 'head-injury-infographic.png';
+          					$('#imageDownload').attr('disabled', false);
+          					$('#imageDownload').text('Download (.png)');
+          				}, 1500);
+          			});
+          		}
+          		
+				// lineAdjust() ensures that no labels on the outside of each pie chart do not overlap.
+          		function lineAdjust() {
+          		
+          			if (isIE) {
+          				var svg = d3.selectAll('.animated-ring svg');
+          				var polyline = svg.select(".lines").selectAll("polyline").filter(function(d) { return this.points.numberOfItems > 0; });
+          				for (var i = 0; i < polyline.length; i++) {
+          					var lines = polyline[i];
+          					if (lines.length > 1 && lines.parentNode.parentNode.childNodes[7].childNodes.length > 1) {
+          						var multi = $(lines).parent().attr('transform');
+          						multi = multi.split('.');
+          						multi = '0.' + multi[1].slice(0,-1);
+          						multi = 1/multi;
+          						multi = multi*12;
+          						var points1 = polyline[i][lines.length-1].points;
+          						var points2 = polyline[i][lines.length-2].points;
+          						if (((points1.getItem(points1.numberOfItems-1).y - points2.getItem(points2.numberOfItems-1).y) * -1) < multi) {
+          							points1.getItem(points1.numberOfItems-1).y = points2.getItem(points2.numberOfItems-1).y - multi;
+          							points1.getItem(points1.numberOfItems-2).y = points2.getItem(points2.numberOfItems-1).y - multi;
+          							var last = false;
+          							var num = lines.parentNode.parentNode.childNodes[7].childNodes.length-1;
+          							while (!last) {
+          								if (lines.parentNode.parentNode.childNodes[7].childNodes[num].textContent === "")
+          									num = num - 1;
+          								else
+          									last = true;
+          							}
+          							var labelText = lines.parentNode.parentNode.childNodes[7].childNodes[num].attributes['transform'].value;
+          							labelText = labelText.split(' ');
+          							labelText[1] = points2.getItem(points2.numberOfItems-1).y - multi + ')';
+          							lines.parentNode.parentNode.childNodes[7].childNodes[num].attributes['transform'].value = labelText.join(',');
+          						}
+          					}
+          				}	
+          			
+          			}
+          			
+          			else {
+          			
+          				var svg = d3.selectAll('.animated-ring svg');
+          				var polyline = svg.select(".lines").selectAll("polyline").filter(function(d) { return this.points.length > 0; });
+          				for (var i = 0; i < polyline.length; i++) {
+          					var lines = polyline[i];
+          					if (lines.length > 1) {
+          						var multi = $(lines).parent().attr('transform');
+          						multi = multi.split('.');
+          						multi = '0.' + multi[1].slice(0,-1);
+          						multi = 1/multi;
+          						multi = multi*12;
+          						var points1 = polyline[i][lines.length-1].points;
+          						var points2 = polyline[i][lines.length-2].points;
+          						if (((points1.getItem(points1.length-1).y - points2.getItem(points2.length-1).y) * -1) < multi) {
+          							points1.getItem(points1.length-1).y = points2.getItem(points2.length-1).y - multi;
+          							points1.getItem(points1.length-2).y = points2.getItem(points2.length-1).y - multi;
+          							var label = $(lines).parent().parent().find('.labels').first();
+          							label = label[0];
+          							var text = $(label).find('text:not(:empty)');
+          							text = text[text.length-1];
+          							var labelText = $(text).attr('transform');
+          							labelText = labelText.split(',');
+          							labelText[1] = points2.getItem(points2.length-1).y - multi + ')';
+          							$(text).attr('transform', labelText.join(','));
+          						}
+          					}
+          				}	
+          			
+          			}			
+          		}
+        </script>
+        <h3>Share</h3>
+        <div id="imgDownloadDiv" class="text-center">
+          <a id="generateImage" class="btn btn-default">Generate Image</a> <a id="imageDownload" disabled class="btn btn-primary">Download (.png)</a><br/>
+        </div>
+        <div class="col-md-12 text-center" id="share">
+          <a target="_blank" class="btn" id="githubBtn" href="https://github.com/infobase-phac-aspc/head-injury-infographic"><span class="fa fa-github"></span><a target="_blank" onclick='generateUrl(this)' class="btn" id="twitterBtn" href="https://twitter.com/share?url="><span class="fa fa-twitter"></span></a><a target="_blank" onclick='generateUrl(this)' class="btn" id="facebookBtn" href="http://www.facebook.com/sharer/sharer.php?u="><span class="fa fa-facebook"></span></a>
+        </div>
+        <div id="preview"></div>
+      </div>
+      <!-- /application -->
+      <div class="clearfix"></div>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h2 class="panel-title">Notes</h2>
+        </div>
+        <div class="panel-body small">
+          <ul class="list-unstyled">
+            <li>The Canadian Hospitals Injury Reporting and Prevention Program (CHIRPP) is an emergency department (ED)-based injury and poisoning surveillance system operating in 16 sites across Canada. It collects patients' accounts of pre-event injury circumstances (narratives of "what went wrong") using the Injury/Poisoning Reporting form, and additional clinical data about the injured person. The CHIRPP comprises a sample of Canada's hospital emergency departments, so the data should not be used to draw conclusions about injury patterns across the entire Canadian population.</li>
+            <li><sup>a</sup> A small percentage of cases are still being entered into the system, counts are proportional estimates</li>
+            <li><sup>b</sup> As a proportion of all sports and Recreation-Related <acronym title="Traumatic Brain Injury">TBI<acronym>s for the same age and sex.</li>
+            <li><strong>Children's Active Games</strong>: Includes tag, hide and seek, Red Rover, Playing Ball, tree-climbing</li>
+          </ul>
+        </div>
+      </div>
+      </section> 
+    </main>
+    <footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
+    </footer>
+    <!--[if gte IE 9 | !IE ]><!--> <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script> <script src="../js/wet-boew.min.js"></script> <!--<![endif]--> <!--[if lt IE 9]><script src="../js/ie8-wet-boew2.min.js"></script><![endif]--> 
+  </body>
+</html>
