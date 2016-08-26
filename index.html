@@ -419,7 +419,7 @@
                   <div class="col-md-4">
                     <span aria-posinset="1" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
                       <li style="border-color: #1f77b4">
-                        <svg class="checkmark1" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                        <svg id="basketballSvg" class="checkmark1" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='basketballPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                         </svg>
@@ -430,7 +430,7 @@
                   <div class="col-md-3">
                     <span aria-posinset="2" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
                       <li style="border-color: #aec7e8">
-                        <svg class="checkmark2" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                        <svg id="bicyclingSvg" class="checkmark2" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='bicyclingPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                         </svg>
@@ -441,7 +441,7 @@
                   <div class="col-md-4">
                     <span aria-posinset="3" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
                       <li style="border-color: #ff7f0e">
-                        <svg class="checkmark3" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                        <svg id="cheerleadingSvg" class="checkmark3" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='cheerleadingPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                         </svg>
@@ -454,7 +454,7 @@
                   <div class="col-md-4">
                     <span aria-posinset="4" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
                       <li style="border-color: #ffbb78">
-                        <svg class="checkmark4" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                        <svg id="activeGamesSvg" class="checkmark4" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='cagPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                         </svg>
@@ -465,7 +465,7 @@
                   <div class="col-md-3">
                     <span aria-posinset="5" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
                       <li style="border-color: #2ca02c">
-                        <svg class="checkmark5" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                        <svg id="footballSvg" class="checkmark5" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='footballPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                         </svg>
@@ -476,7 +476,7 @@
                   <div class="col-md-4">
                     <span aria-posinset="6" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
                       <li style="border-color: #98df8a">
-                        <svg class="checkmark6" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                        <svg id="hockeySvg" class="checkmark6" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='hockeyPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                         </svg>
@@ -489,7 +489,7 @@
                   <div class="col-md-4">
                     <span aria-posinset="7" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
                       <li style="border-color: #d62728">
-                        <svg class="checkmark7" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                        <svg id="skatingSvg" class="checkmark7" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='skatingPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                         </svg>
@@ -500,7 +500,7 @@
                   <div class="col-md-3">
                     <span aria-posinset="8" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
                       <li style="border-color: #ff9896">
-                        <svg class="checkmark8" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                        <svg id="otherSvg" class="checkmark8" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='otherPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                         </svg>
@@ -511,7 +511,7 @@
                   <div class="col-md-4">
                     <span aria-posinset="9" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
                       <li style="border-color: #9467bd">
-                        <svg class="checkmark9" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                        <svg id="playgroundSvg" class="checkmark9" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='pePath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                         </svg>
@@ -524,7 +524,7 @@
                   <div class="col-md-4">
                     <span aria-posinset="10" aria-setsize="13" onclick="legendToggle(this)">
                       <li style="border-color: #c5b0d5">
-                        <svg class="checkmark10" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                        <svg id="ringetteSvg" class="checkmark10" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='ringettePath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                         </svg>
@@ -535,7 +535,7 @@
                   <div class="col-md-3">
                     <span aria-posinset="11" aria-setsize="13" onclick="legendToggle(this)">
                       <li style="border-color: #8c564b">
-                        <svg class="checkmark11" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                        <svg id="rugbySvg" class="checkmark11" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='rugbyPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                         </svg>
@@ -546,7 +546,7 @@
                   <div class="col-md-4">
                     <span aria-posinset="12" aria-setsize="13" onclick="legendToggle(this)">
                       <li style="border-color: #c49c94">
-                        <svg class="checkmark12" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                        <svg id="sleddingSvg" class="checkmark12" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='sleddingPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                         </svg>
@@ -559,7 +559,7 @@
                   <div class="col-md-4">
                     <span aria-posinset="13" aria-setsize="13" onclick="legendToggle(this)">
                       <li style="border-color: #e377c2">
-                        <svg class="checkmark13" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
+                        <svg id="soccerSvg" class="checkmark13" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='soccerPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                         </svg>
@@ -2273,15 +2273,45 @@
 				// is necessary to ensure that all images are loaded into the canvas.
           		function download() {
           			var svg1, svg2, svg3, svg4, svg5, svg6;
+					
+					var svgArr = ['basketballSvg', 'bicyclingSvg', 'cheerleadingSvg', 'activeGamesSvg', 'footballSvg', 'hockeySvg', 'skatingSvg', 'otherSvg', 'playgroundSvg', 'ringetteSvg', 'rugbySvg', 'sleddingSvg', 'soccerSvg'];
+					
           			svgAsPngUri(document.getElementById("svg1"), {}, function (uri) {
           				svg1 = uri;
           				image1 = new Image();
           				image1.src = svg1;
-          				legend = new Image();
-          				if (aView)
-          					legend.src = 'img/aLegend.png';
+						bg = new Image();
+          				if (aView) {
+          					bg.src = 'img/PHAC_EN.png';
+							basketball = new Image();
+							basketball.src = 'img/aView/basketball.png';
+							bicycling = new Image();
+							bicycling.src = 'img/aView/bicycling.png';
+							cheerleading = new Image();
+							cheerleading.src = 'img/aView/cheerleading.png';
+							activeGames = new Image();
+							activeGames.src = 'img/aView/activeGames.png';
+							football = new Image();
+							football.src = 'img/aView/football.png';
+							hockey = new Image();
+							hockey.src = 'img/aView/hockey.png';
+							skating = new Image();
+							skating.src = 'img/aView/skating.png';
+							other = new Image();
+							other.src = 'img/aView/other.png';
+							playground = new Image();
+							playground.src = 'img/aView/playground.png';
+							ringette = new Image();
+							ringette.src = 'img/aView/ringette.png';
+							rugby = new Image();
+							rugby.src = 'img/aView/rugby.png';
+							sledding = new Image();
+							sledding.src = 'img/aView/sledding.png';
+							soccer = new Image();
+							soccer.src = 'img/aView/soccer.png';
+						}
           				else
-          					legend.src = 'img/legend.png';
+          					bg.src = 'img/PHAC_EN.png';
           			});
           			svgAsPngUri(document.getElementById("svg2"), {}, function (uri) {
           				svg2 = uri;
@@ -2307,24 +2337,63 @@
           				svg6 = uri;
           				image6 = new Image();
           				image6.src = svg6;
-          				$('#preview').html('<canvas id="downloadImage" width="1145" height="931"></canvas>');
+          				$('#preview').html('<canvas id="downloadImage" width="1145" height="1077"></canvas>');
           				setTimeout(function(){
           					var canvas = document.getElementById('downloadImage');
           					var ctx = canvas.getContext("2d");
-          					ctx.drawImage(image1,65,80);
-          					ctx.drawImage(image2,425,80);
-          					ctx.drawImage(image3,785,80);
-          					ctx.drawImage(image4,65,440);
-          					ctx.drawImage(image5,425,440);
-          					ctx.drawImage(image6,785,440);
-          					ctx.drawImage(legend,298,800);
+							ctx.drawImage(bg,0,0);
+          					ctx.drawImage(image1,65,90);
+          					ctx.drawImage(image2,425,90);
+          					ctx.drawImage(image3,785,90);
+          					ctx.drawImage(image4,65,450);
+          					ctx.drawImage(image5,425,450);
+          					ctx.drawImage(image6,785,450);
+							ctx.font = "bold 15px Helvetica Neue, sans-serif";
+							var offsetX = 0;
+							var offsetY = 0;
+							for (var i = 0; i < 13; i++) {
+								if (i%2 != 0)
+									offsetY = 30;
+								else
+									offsetY = 0;
+								if (i == 2 || i == 3)
+									offsetX = 120;
+								else if (i == 4 || i == 5)
+									offsetX = 340;
+								else if (i == 6 || i == 7)
+									offsetX = 460;
+								else if (i == 8 || i == 9)
+									offsetX = 580;
+								else if (i == 10 || i == 11)
+									offsetX = 780;
+								else if (i == 12)
+									offsetX = 980;
+								else
+									offsetX = 0;
+								if (!aView) {
+									ctx.fillStyle = $('#' + svgArr[i] + ' rect').css('stroke');
+									ctx.fillRect(20 + offsetX, 819 + offsetY, 20, 20);
+								}
+								else {
+									ctx.drawImage(eval(svgArr[i].substring(0,svgArr[i].length-3)), 20 + offsetX, 819 + offsetY);
+								}									
+								var fillString = $('#' + svgArr[i]).parent().find('label').first().text();
+								if ($('#' + svgArr[i]).parent().find('label').first().attr('class') === "off")
+									ctx.fillStyle = "#bbb";
+								else
+									ctx.fillStyle = "#000";
+								ctx.fillText(fillString, 50 + offsetX, 834 + offsetY);
+							}
           					ctx.font = "20px Helvetica Neue, sans-serif";
-          					ctx.fillText("Male",0,265);
-          					ctx.fillText("Female",0,625);
-          					ctx.fillText("Ages 5-9",205,65);
-          					ctx.fillText("Ages 10-14",555,65);
-          					ctx.fillText("Ages 15-19",915,65);
-          					ctx.fillText("Top 5 Sports and Recreational Activities Responsible for Concussion and Other Brain Injury Related Hospital Visits", 65, 20);
+							ctx.fillStyle = "#000";
+          					ctx.fillText("Male",20,275);
+          					ctx.fillText("Female",10,635);
+          					ctx.fillText("Ages 5-9",205,80);
+          					ctx.fillText("Ages 10-14",555,80);
+          					ctx.fillText("Ages 15-19",915,80);
+							ctx.font = "bold 25px Helvetica Neue, sans-serif";
+          					ctx.fillText("Top 5 Sports and Recreational Activities Responsible for Concussion", 161, 26);
+							ctx.fillText("and Other Brain Injury Related Hospital Visits", 303, 51);
           					var imageDownload = document.getElementById('imageDownload');
           					imageDownload.href = canvas.toDataURL();
           					imageDownload.download = 'head-injury-infographic.png';
