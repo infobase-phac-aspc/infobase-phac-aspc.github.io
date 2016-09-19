@@ -1,0 +1,359 @@
+
+      html.details .checkmark__rect {
+      width: 50px;
+      height: 50px;
+      stroke-dasharray: 201px;
+      stroke-dashoffset: 166px;
+      stroke-width: 5px;
+      stroke-miterlimit: 11px;
+      fill: none;
+      animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+      }
+      .checkmark1, .checkmark2, .checkmark3, .checkmark4, .checkmark5, .checkmark6, .checkmark7, .checkmark8, .checkmark9, .checkmark10, .checkmark11, .checkmark12, .checkmark13 {
+      transform: scale(0.5);
+      display: inline;
+      stroke-width: 5px;
+      stroke: #fff;
+      stroke-miterlimit: 10px;
+      }
+      .checkmark1 {
+      animation: fill1 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark2 {
+      animation: fill2 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark3 {
+      animation: fill3 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark4 {
+      animation: fill4 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark5 {
+      animation: fill5 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark6 {
+      animation: fill6 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark7 {
+      animation: fill7 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark8 {
+      animation: fill8 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark9 {
+      animation: fill9 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark10 {
+      animation: fill10 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark11 {
+      animation: fill11 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark12 {
+      animation: fill12 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      .checkmark13 {
+      animation: fill13 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      html.details .checkmark__check_load {
+      stroke-dasharray: 48px;
+      stroke-dashoffset: 48px;
+      animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+      }
+      html.details .checkmark__check {
+      stroke-dasharray: 48px;
+      stroke-dashoffset: 48px;
+      animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+      }
+      @keyframes stroke {
+      100% {
+      stroke-dashoffset: 0px;
+      }
+      }
+      @keyframes scale {
+      0%, 100% {
+      transform: none;
+      }
+      50% {
+      transform: scale3d(1.1, 1.1, 1);
+      }
+      }
+      @keyframes fill1 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #1f77b4;
+      }
+      }
+      @keyframes fill2 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #aec7e8;
+      }
+      }
+      @keyframes fill3 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #ff7f0e;
+      }
+      }
+      @keyframes fill4 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #ffbb78;
+      }
+      }
+      @keyframes fill5 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #2ca02c;
+      }
+      }
+      @keyframes fill6 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #98df8a;
+      }
+      }
+      @keyframes fill7 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #d62728;
+      }
+      }
+      @keyframes fill8 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #ff9896;
+      }
+      }
+      @keyframes fill9 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #9467bd;
+      }
+      }
+      @keyframes fill10 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #c5b0d5;
+      }
+      }
+      @keyframes fill11 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #8c564b;
+      }
+      }
+      @keyframes fill12 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #c49c94;
+      }
+      }
+      @keyframes fill13 {
+      100% {
+      box-shadow: inset 0px 0px 0px 30px #e377c2;
+      }
+      }
+      body {
+      font-size: 16px;
+      }
+      #dataViz { 
+      font-size: 14px;
+      }
+      .btn {
+      font-size: 16px !important;
+      }
+      label.off {
+      color: lightgray;
+      }
+      #dataViz th, #dataViz td span {
+      text-align: center;
+      font-size: 25px;
+      font-family: Calibri, "Times New Roman", serif;
+      }
+      .disabled {
+      display: none;
+      }
+      .animated-ring {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      width: 200px;
+      display: inline;
+      }
+      input[type=checkbox] {
+      display: none;
+      }
+      svg {
+      overflow: visible !important;
+      }
+      .titlerow{
+      padding-left:40px;
+      }
+      .selection {
+      text-align: center;
+      margin-top: 20px;
+      }
+      fieldset ul li {
+      display: inline-block;
+      width: 240px;
+      text-align: left;
+      }
+      li svg {
+      text-align: left;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      top: 5px;
+      margin-right: 5px;
+      }
+      label {
+      margin-bottom: 0;
+      margin-right: 5px;
+      }
+      table{
+      border-collapse:collapse;
+      column-gap:40px;
+      }
+      tbody {
+      text-align: center;
+      }
+      thead {
+      display:table-row-group;
+      text-align:center;
+      }
+      td {
+      width:40px;
+      }
+      th {
+      font-weight:bold;
+      font-size:35px;
+      text-align:center;
+      }
+      h5 {
+      vertical-align:middle;
+      font-weight:bold;
+      font-size:40px;
+      text-align:center;
+      }
+      #controls {
+      width: 100%;
+      margin: 0 auto;
+      }
+      #btnControls {
+      text-align:center;
+      }
+      li svg rect {
+      width: 20px;
+      height: 20px;
+      }
+      fieldset {
+      border: 2px groove !important;
+      width: auto;
+      height: 235px;
+      }
+      fieldset legend {
+      font-weight: bold;
+      font-size: auto;
+      width: auto;
+      margin: 0px auto;
+      border: 0;
+      }
+      .rotate {
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      color: #5cb85c;
+      }
+      fieldset ul {
+      text-align: left;
+      margin-top: 15px;
+      margin-bottom: 0;
+      }
+      .cmn-toggle {
+      position: absolute;
+      margin-left: -9999px;
+      visibility: hidden;
+      }
+      .cmn-toggle + label {
+      position: relative;
+      cursor: pointer;
+      outline: none;
+      user-select: none;
+      }
+      input.cmn-toggle-round + label {
+      top:5px;
+      padding: 2px;
+      width: 52px;
+      height:26px;
+      background-color: #dddddd;
+      border-radius: 26px;
+      }
+      input.cmn-toggle-round + label:before,
+      input.cmn-toggle-round + label:after {
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      bottom: 1px;
+      content: "";
+      }
+      input.cmn-toggle-round + label:before {
+      right: 1px;
+      background-color: #f1f1f1;
+      border-radius: 26px;
+      transition: background 0.4s;
+      }
+      input.cmn-toggle-round + label:after {
+      width: 24px;
+      background-color: #fff;
+      border-radius: 100%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: margin 0.4s;
+      }
+      input.cmn-toggle-round:checked + label:before {
+      background-color: #8ce196;
+      }
+      input.cmn-toggle-round:checked + label:after {
+      margin-left: 26px;
+      }
+      polyline{
+      opacity: 0.3;
+      stroke: #000;
+      stroke-width: 2px;
+      fill: none;
+      }
+      #preview {
+      display: none;
+      }
+      .toggleImg {
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+      }
+      @media screen and (max-width: 991px) {
+      table, thead, tbody, th, td, tr { 
+      display: block; 
+      text-align:center;
+      }
+      thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      }
+      tr { border: 1px solid #ccc; }
+      td { 
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      }
+      td:before { 
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+      }
+      fieldset {
+      height: auto;
+      padding-bottom: 15px;
+      }
+      fieldset ul {
+      display: inline-block;
+      }
+      }
