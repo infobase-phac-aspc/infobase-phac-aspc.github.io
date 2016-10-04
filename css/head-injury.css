@@ -55,6 +55,9 @@
       .checkmark13 {
       animation: fill13 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
       }
+	  .disabled {
+		  display: inline-block !important;
+	  }
       html.details .checkmark__check_load {
       stroke-dasharray: 48px;
       stroke-dashoffset: 48px;
@@ -186,6 +189,11 @@
       fieldset ul li {
       display: inline-block;
       width: 240px;
+      text-align: left;
+      }
+	  .fr ul li {
+      display: inline-block;
+      width: 255px;
       text-align: left;
       }
       li svg {
@@ -322,6 +330,22 @@
       -o-user-select: none;
       user-select: none;
       }
+	  #share span {
+		  font-size: 3em;
+	  }
+	  #shareDiv {
+		  width: 400px;
+		  height: 170px;
+		  margin: 15px auto;
+		  padding-left: 10px;
+		  padding-right: 10px;
+	  }
+	  #shareDiv h3 {
+		  text-align: center;
+	  }
+	  #imgDownloadDiv {
+		 margin-bottom: 10px;
+	  }
       @media screen and (max-width: 991px) {
       table, thead, tbody, th, td, tr { 
       display: block; 
