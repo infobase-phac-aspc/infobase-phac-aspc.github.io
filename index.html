@@ -1782,75 +1782,81 @@
                           var text = $(svg).find('.centerValue text')[0];
           				var svgScale = $(text).text()/max;
                           var cVal = $(svg).find('.centerValue')[0];
-          				$(cVal).attr({"transform": function() {
-          						var numChars = $(cVal).text().length;
-          						var width = 0;
-          						if (numChars == 2)
-          							width = 22.24;
-          						else if (numChars == 3)
-          							width = 33.36;
-          						else
-          							width = 44.48;
-          						var widthOffset = width/2.0 * -1.0;
-          						return 'translate(' + widthOffset + ',8)';
-          						}});
-          				var sliceVal = $(svg).find('.sliceVal');
-          				for (var j = 0; j < sliceVal.length; j++) {
-          					$(sliceVal[j]).attr({"y": function() {
-          						return $(sliceVal[j]).attr('y') * (0.9/svgScale); 
-          					}});
-          					$(sliceVal[j]).attr({"x": function() {
-          						return $(sliceVal[j]).attr('x') * (0.9/svgScale); 
-          					}});
-          					$(sliceVal[j]).attr({"transform": function() {
-          						var numChars = $(sliceVal[j]).text().length;
-          						var width = 0;
-          						if (numChars == 2)
-          							width = 18;
-          						else if (numChars == 3)
-          							width = 26;
-          						else
-          							width = 35;
-          						var widthOffset = width/2.0 * -1.0;
-          						return 'translate(' + widthOffset + ',6)';
-          						}});
-          					$(sliceVal[j]).css('fill', function() {
-          					    if (aView) {
-                                      var id = $(sliceVal[j]).parent().find('path').first().attr('id');
-                                      if ($(sliceVal[j]).parent().find('.sliceVal').first().text() === "")
-                                          $(sliceVal[j]).parent().find('.bgText').first().hide();
-                                      if (id === "Basketball" || id === "Childrens Active Games" || id === "Rugby" || id === "Ice Hockey" || id === "Playground Equipment")
-                                          return '#fff';
-                                      else if (id === "Ice Skating" || id === "Ringette" || id === "Cheerleading" || id === "Soccer" || id === "Bicycling" || id === "Football" || id === "SleddingTobogganing")
-                                          return '#343434';
-                                      else
-                                          return '#fff';
-          					    }
-          					    else
-          					        return "#fff";
-          				})
-          				}
-          				var rect = $(svg).find('.bgText');
-          				for (var j = 0; j < rect.length; j++) {
-          					$(rect[j]).attr({"y": function() {
-          						return $(rect[j]).attr('y') * (0.9/svgScale); 
-          					}});
-          					$(rect[j]).attr({"x": function() {
-          						return $(rect[j]).attr('x') * (0.9/svgScale); 
-          					}});
-          					$(rect[j]).attr({"transform": function() {
-          						var numChars = $(rect[j]).parent().find('.sliceVal').first().text().length;
-          						var width = 0;
-          						if (numChars == 2)
-          							width = 18;
-          						else if (numChars == 3)
-          							width = 26;
-          						else
-          							width = 35;
-          						var widthOffset = width/2.0 * -1.0;
-          						return 'translate(' + widthOffset + ',-6)';
-          						}});
-          				}
+						  var cValNum = parseInt($(cVal).text());
+						  if (cValNum > 0) {
+							$(cVal).attr({"transform": function() {
+									var numChars = $(cVal).text().length;
+									var width = 0;
+									if (numChars == 2)
+										width = 22.24;
+									else if (numChars == 3)
+										width = 33.36;
+									else
+										width = 44.48;
+									var widthOffset = width/2.0 * -1.0;
+									return 'translate(' + widthOffset + ',8)';
+									}});
+							var sliceVal = $(svg).find('.sliceVal');
+							for (var j = 0; j < sliceVal.length; j++) {
+								$(sliceVal[j]).attr({"y": function() {
+									return $(sliceVal[j]).attr('y') * (0.9/svgScale); 
+								}});
+								$(sliceVal[j]).attr({"x": function() {
+									return $(sliceVal[j]).attr('x') * (0.9/svgScale); 
+								}});
+								$(sliceVal[j]).attr({"transform": function() {
+									var numChars = $(sliceVal[j]).text().length;
+									var width = 0;
+									if (numChars == 2)
+										width = 18;
+									else if (numChars == 3)
+										width = 26;
+									else
+										width = 35;
+									var widthOffset = width/2.0 * -1.0;
+									return 'translate(' + widthOffset + ',6)';
+									}});
+								$(sliceVal[j]).css('fill', function() {
+									if (aView) {
+										  var id = $(sliceVal[j]).parent().find('path').first().attr('id');
+										  if ($(sliceVal[j]).parent().find('.sliceVal').first().text() === "")
+											  $(sliceVal[j]).parent().find('.bgText').first().hide();
+										  if (id === "Basketball" || id === "Childrens Active Games" || id === "Rugby" || id === "Ice Hockey" || id === "Playground Equipment")
+											  return '#fff';
+										  else if (id === "Ice Skating" || id === "Ringette" || id === "Cheerleading" || id === "Soccer" || id === "Bicycling" || id === "Football" || id === "SleddingTobogganing")
+											  return '#343434';
+										  else
+											  return '#fff';
+									}
+									else
+										return "#fff";
+							})
+							}
+							var rect = $(svg).find('.bgText');
+							for (var j = 0; j < rect.length; j++) {
+								$(rect[j]).attr({"y": function() {
+									return $(rect[j]).attr('y') * (0.9/svgScale); 
+								}});
+								$(rect[j]).attr({"x": function() {
+									return $(rect[j]).attr('x') * (0.9/svgScale); 
+								}});
+								$(rect[j]).attr({"transform": function() {
+									var numChars = $(rect[j]).parent().find('.sliceVal').first().text().length;
+									var width = 0;
+									if (numChars == 2)
+										width = 18;
+									else if (numChars == 3)
+										width = 26;
+									else
+										width = 35;
+									var widthOffset = width/2.0 * -1.0;
+									return 'translate(' + widthOffset + ',-6)';
+									}});
+							}
+						}
+						else {
+							$(svg).find('.bgText').hide();
+						}
                       }
                       lastControl = "relativeSize";
                   }
@@ -1872,81 +1878,87 @@
                           var svg = $(rings[i]).find('svg')[0];
                           var text = $(svg).find('.centerValue text')[0];
                           var sum = $(text).text();
-                          var multi = sum/max;
-                          if (multi < .37) {
-                              $(svg).find('.sliceVal').hide();
-                              $(svg).find('.bgText').hide();
-                          }
-                          $(svg).find('polyline').css('stroke-width', 2 * 1/multi);
-                          $(svg).find('.labels text').css('font-size', 1/multi + 'em');
-          				  $(svg).find('.lines').attr('transform', 'translate(180,180) scale(' + multi + ')');
-          				  $(svg).find('.labels').attr('transform', 'translate(180,180) scale(' + multi + ')');
-                          var digits = $(text).text().length;
-          				var width = 0;
-          				switch (digits) {
-          					case 1:
-          					width = 11.12;
-          					break;
-          					case 2:
-          					width = 22.24;
-          					break;
-          					case 3:
-          					width = 33.36;
-          					break;
-          					case 4:
-          					width = 44.48;
-          					break;
-          				}
-          				var widthOffset = width/2.0 * -1.0;
-                          var cVal = $(svg).find('.centerValue')[0];
-                          $(cVal).attr('transform',function () {
-          				    if (multi < .22)
-          				        return 'translate(' + widthOffset + ',' + -55 + ')';
-          				    else
-          				        return 'translate(' + widthOffset + ',' + 8 + ')';
-          					});
-          				var sliceVal = $(svg).find('.sliceVal');
-          				for (var j = 0; j < sliceVal.length; j++) {
-          					$(sliceVal[j]).attr({"y": function() {
-          						return ($(sliceVal[j]).attr('y')/.9) * multi;
-          					}});
-          					$(sliceVal[j]).attr({"x": function() {
-          						return ($(sliceVal[j]).attr('x')/.9) * multi;
-          					}});
-          					$(sliceVal[j]).attr({"transform": function() {
-          						var numChars = $(sliceVal[j]).text().length;
-          						var width = 0;
-          						if (numChars == 2)
-          							width = 18;
-          						else if (numChars == 3)
-          							width = 26;
-          						else
-          							width = 35;
-          						var widthOffset = width/2.0 * -1.0;
-          				    	return 'translate(' + widthOffset + ',' + 6 + ')';
-          						}});
-          				}
-          				var rect = $(svg).find('.bgText');
-          				for (var j = 0; j < rect.length; j++) {
-          					$(rect[j]).attr({"y": function() {
-          						return $(rect[j]).parent().find('.sliceVal').first().attr('y');
-          					}});
-          					$(rect[j]).attr({"x": function() {
-          						return $(rect[j]).parent().find('.sliceVal').first().attr('x');
-          					}});
-          					$(rect[j]).attr({"transform": function() {
-          						var numChars = $(rect[j]).parent().find('.sliceVal').first().text().length;
-          						var width = 0;
-          						if (numChars == 2)
-          							width = 18;
-          						else if (numChars == 3)
-          							width = 26;
-          						else
-          							width = 35;
-          						var widthOffset = width/2.0 * -1.0;
-          						return 'translate(' + widthOffset + ',' + -6 + ')';
-          						}});
-          				}
+						  if (sum > 0) {
+							  var multi = sum/max;
+							  if (multi < .37) {
+								  $(svg).find('.sliceVal').hide();
+								  $(svg).find('.bgText').hide();
+							  }
+							  $(svg).find('polyline').css('stroke-width', 2 * 1/multi);
+							  $(svg).find('.labels text').css('font-size', 1/multi + 'em');
+							  $(svg).find('.lines').attr('transform', 'translate(180,180) scale(' + multi + ')');
+							  $(svg).find('.labels').attr('transform', 'translate(180,180) scale(' + multi + ')');
+							  var digits = $(text).text().length;
+							var width = 0;
+							switch (digits) {
+								case 1:
+								width = 11.12;
+								break;
+								case 2:
+								width = 22.24;
+								break;
+								case 3:
+								width = 33.36;
+								break;
+								case 4:
+								width = 44.48;
+								break;
+							}
+							var widthOffset = width/2.0 * -1.0;
+							  var cVal = $(svg).find('.centerValue')[0];
+							  $(cVal).attr('transform',function () {
+								if (multi < .22)
+									return 'translate(' + widthOffset + ',' + -55 + ')';
+								else
+									return 'translate(' + widthOffset + ',' + 8 + ')';
+								});
+							var sliceVal = $(svg).find('.sliceVal');
+							for (var j = 0; j < sliceVal.length; j++) {
+								$(sliceVal[j]).attr({"y": function() {
+									return ($(sliceVal[j]).attr('y')/.9) * multi;
+								}});
+								$(sliceVal[j]).attr({"x": function() {
+									return ($(sliceVal[j]).attr('x')/.9) * multi;
+								}});
+								$(sliceVal[j]).attr({"transform": function() {
+									var numChars = $(sliceVal[j]).text().length;
+									var width = 0;
+									if (numChars == 2)
+										width = 18;
+									else if (numChars == 3)
+										width = 26;
+									else
+										width = 35;
+									var widthOffset = width/2.0 * -1.0;
+									return 'translate(' + widthOffset + ',' + 6 + ')';
+									}});
+							}
+							var rect = $(svg).find('.bgText');
+							for (var j = 0; j < rect.length; j++) {
+								$(rect[j]).attr({"y": function() {
+									return $(rect[j]).parent().find('.sliceVal').first().attr('y');
+								}});
+								$(rect[j]).attr({"x": function() {
+									return $(rect[j]).parent().find('.sliceVal').first().attr('x');
+								}});
+								$(rect[j]).attr({"transform": function() {
+									var numChars = $(rect[j]).parent().find('.sliceVal').first().text().length;
+									var width = 0;
+									if (numChars == 2)
+										width = 18;
+									else if (numChars == 3)
+										width = 26;
+									else
+										width = 35;
+									var widthOffset = width/2.0 * -1.0;
+									return 'translate(' + widthOffset + ',' + -6 + ')';
+									}});
+							}
+						}
+						else {
+							$(svg).find('.sliceVal').hide();
+							$(svg).find('.bgText').hide();
+						}
                       }
           			d3.selectAll('g.arc path').each(function(d) {
           				$(this).css('transform', 'scale(' + ($(this).parent().parent().find('.centerValue text').text()/max) + ')');
@@ -1958,6 +1970,7 @@
           				lineAdjust();
           			}, 550);
                   }
+
           
                   // [EN] ConvertToCSV() is called when the Download (.csv) button is clicked,
 				  // and converts each object (svg data) into text that can be loaded into
