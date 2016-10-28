@@ -1433,7 +1433,7 @@
           						multi = sum/max;
           					$(slice).text(function() {
           					    if (d.data.count != 0 && multi >= .37)
-          					        $(this).show('slow');
+          					        $(this).show('fast');
           					   else
           					        $(this).hide();
           					   if (d.data.count != 0)
@@ -1509,7 +1509,7 @@
                       		    var centerVal = $(centerDiv).text();
                       		    var multi = centerVal/sumMax;
                       		    if (d.data.count != 0 && multi < .37) {
-          							$(this).show('slow');
+          							$(this).show('fast');
                       		        return parseInt(Math.round((d.value/centerVal)*100)) + '%';
           							}
                       		    else
@@ -1525,7 +1525,7 @@
                   		    if (d.data.count == 0 || multi >= .37)
                   		        $(this).remove();
           					else
-          						$(this).show('slow');
+          						$(this).show('fast');
                           });
           				
           			setTimeout(function() {
