@@ -54,7 +54,7 @@
 <p>You can use the Controls (relative size and accessibility view) to change your display, as well as the legend to customize what you want to see.  The &lsquo;other&rsquo; category (sports or recreational activities that are not within the top five) is not displayed by default but can be added by clicking on the associated check box. You can also download and view the dataset.</p>
 
 
-      <div class="clearfix"></div>
+ <div class="clearfix"></div>
       <div role="application">
         <div role="listbox" tabindex="0" id="controls" style="-webkit-backface-visibility: hidden;">
           <div tabindex="0" id="legendControls" class="legend text-center col-md-9">
@@ -64,7 +64,7 @@
                 <div class="row">
                   <div class="col-md-4">
 				  <ul style="margin: 0; padding: 0;">
-				  <li style="border-color: #1f77b4"><span role="option" aria-posinset="1" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+				  <li style="border-color: #1f77b4"><span role="option" tabindex="0" aria-posinset="1" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();legendToggle(this)};">
                         <svg id="basketballSvg" class="checkmark1" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='basketballPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
@@ -74,7 +74,7 @@
                   </div>
                   <div class="col-md-3">
                     <ul style="margin: 0; padding: 0;">
-                      <li style="border-color: #aec7e8"><span role="option" aria-posinset="2" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                      <li style="border-color: #aec7e8"><span role="option" tabindex="0" aria-posinset="2" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();legendToggle(this)};">
                         <svg id="bicyclingSvg" class="checkmark2" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='bicyclingPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
@@ -85,7 +85,7 @@
                   </div>
                   <div class="col-md-4">
                     <ul style="margin: 0; padding: 0;">
-                      <li style="border-color: #ff7f0e"><span role="option" aria-posinset="3" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                      <li style="border-color: #ff7f0e"><span role="option" tabindex="0" aria-posinset="3" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();legendToggle(this)};">
                         <svg id="cheerleadingSvg" class="checkmark3" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='cheerleadingPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
@@ -98,7 +98,7 @@
                 <div class="row">
                   <div class="col-md-4">
                     <ul style="margin: 0; padding: 0;">
-                      <li style="border-color: #ffbb78"><span role="option" aria-posinset="4" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                      <li style="border-color: #ffbb78"><span role="option" tabindex="0" aria-posinset="4" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();legendToggle(this)};">
                         <svg id="activeGamesSvg" class="checkmark4" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='cagPath' />
                           <path class="checkmark__check_load" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
@@ -109,7 +109,7 @@
                   </div>
                   <div class="col-md-3">
 				  <ul style="margin: 0; padding: 0;">
-                     <li style="border-color: #2ca02c"><span role="option" aria-posinset="5" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                     <li style="border-color: #2ca02c"><span role="option" tabindex="0" aria-posinset="5" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();legendToggle(this)};">
                      
                         <svg id="footballSvg" class="checkmark5" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='footballPath' />
@@ -121,7 +121,7 @@
                   </div>
                   <div class="col-md-4">
 				  <ul style="margin: 0; padding: 0;">
-                     <li style="border-color: #98df8a"><span role="option" aria-posinset="6" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                     <li style="border-color: #98df8a"><span role="option" tabindex="0" aria-posinset="6" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();legendToggle(this)};">
                      
                         <svg id="hockeySvg" class="checkmark6" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='hockeyPath' />
@@ -135,7 +135,7 @@
                 <div class="row">
                   <div class="col-md-4">
 				  <ul style="margin: 0; padding: 0;">
-                    <li style="border-color: #d62728"><span role="option" aria-posinset="7" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                    <li style="border-color: #d62728"><span role="option" tabindex="0" aria-posinset="7" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();legendToggle(this)};">
                       
                         <svg id="skatingSvg" class="checkmark7" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='skatingPath' />
@@ -147,7 +147,7 @@
                   </div>
                   <div class="col-md-3">
 				  <ul style="margin: 0; padding: 0;">
-                    <li style="border-color: #ff9896"><span role="option" aria-posinset="8" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                    <li style="border-color: #ff9896"><span role="option" tabindex="0" aria-posinset="8" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();legendToggle(this)};">
                       
                         <svg id="otherSvg" class="checkmark8" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='otherPath' />
@@ -159,7 +159,7 @@
                   </div>
                   <div class="col-md-4">
 				  <ul style="margin: 0; padding: 0;">
-                    <li style="border-color: #9467bd"><span role="option" aria-posinset="9" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)">
+                    <li style="border-color: #9467bd"><span role="option" tabindex="0" aria-posinset="9" aria-setsize="13" aria-controls="dataViz" onclick="legendToggle(this)" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();legendToggle(this)};">
                       
                         <svg id="playgroundSvg" class="checkmark9" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='pePath' />
@@ -173,7 +173,7 @@
                 <div class="row">
                   <div class="col-md-4">
 				  <ul style="margin: 0; padding: 0;">
-                    <li style="border-color: #c5b0d5"><span role="option" aria-posinset="10" aria-setsize="13" onclick="legendToggle(this)">
+                    <li style="border-color: #c5b0d5"><span role="option" tabindex="0" aria-posinset="10" aria-setsize="13" onclick="legendToggle(this)" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();legendToggle(this)};">
                       
                         <svg id="ringetteSvg" class="checkmark10" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='ringettePath' />
@@ -185,7 +185,7 @@
                   </div>
                   <div class="col-md-3">
 				  <ul style="margin: 0; padding: 0;">
-                    <li style="border-color: #8c564b"><span role="option" aria-posinset="11" aria-setsize="13" onclick="legendToggle(this)">
+                    <li style="border-color: #8c564b"><span role="option" tabindex="0" aria-posinset="11" aria-setsize="13" onclick="legendToggle(this)" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();legendToggle(this)};">
                       
                         <svg id="rugbySvg" class="checkmark11" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='rugbyPath' />
@@ -197,7 +197,7 @@
                   </div>
                   <div class="col-md-4">
 				  <ul style="margin: 0; padding: 0;">
-                     <li style="border-color: #c49c94"><span role="option" aria-posinset="12" aria-setsize="13" onclick="legendToggle(this)">
+                     <li style="border-color: #c49c94"><span role="option" tabindex="0" aria-posinset="12" aria-setsize="13" onclick="legendToggle(this)" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();legendToggle(this)};">
                      
                         <svg id="sleddingSvg" class="checkmark12" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='sleddingPath' />
@@ -211,7 +211,7 @@
                 <div class="row">
                   <div class="col-md-4">
 				  <ul style="margin: 0; padding: 0;">
-                    <li style="border-color: #e377c2"><span role="option" aria-posinset="13" aria-setsize="13" onclick="legendToggle(this)">
+                    <li style="border-color: #e377c2"><span role="option" tabindex="0" aria-posinset="13" aria-setsize="13" onclick="legendToggle(this)" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();legendToggle(this)};">
                       
                         <svg id="soccerSvg" class="checkmark13" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 53 52">
                           <rect class="checkmark__rect" width="50" height="50" id='soccerPath' />
@@ -228,18 +228,22 @@
           <div tabindex="0" id="btnControls" class="col-md-3">
             <fieldset>
               <legend>Controls</legend>
-              <button aria-controls="dataViz" title="View data visualization by age" style="margin:10px;display:inline-block;" id="AgeSexBtn" class="btn btn-primary AgeSexBtn" type="button" value="Sex" onclick="changeTableFormat();">View by Age</button>
-              <a aria-controls="dataViz" title="Download source data in .csv format" style="margin:10px;display:inline-block;" id="DownloadBtn" class="btn btn-primary DownloadBtn">Download (.csv)</a>
-              <div style="margin:10px;"><span>Relative Size</span><input id="ToggleBtn" aria-controls="dataViz" title="Toggle relative size" class="cmn-toggle cmn-toggle-round" checked type="checkbox">
+			  
+              <button aria-controls="dataViz" title="View data visualization by age" style="margin:10px;display:inline-block;" id="AgeSexBtn" class="btn btn-primary AgeSexBtn" value="Sex" onclick="changeTableFormat();">View by Age</button>
+              <a aria-controls="dataViz" tabindex="0" role="button" title="Download source data in .csv format" style="margin:10px;display:inline-block;" id="DownloadBtn" class="btn btn-primary DownloadBtn" onClick="DownloadDataBtn()" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();DownloadDataBtn()};">Download (.csv)</a>
+			  
+              <div style="margin:10px;" role="button"><span tabindex="0" onClick="$('#ToggleBtn').trigger('click');" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();$('#ToggleBtn').trigger('click');};">Relative Size</span><input id="ToggleBtn" aria-controls="dataViz" onClick="ToggleBtn()" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();ToggleBtn();};" title="Toggle relative size" class="cmn-toggle cmn-toggle-round" checked type="checkbox">
                 <label for="ToggleBtn"></label><img class='toggleImg' alt="Help Icon" src='./img/questionIcon.gif' width="15" height="15" style="position:relative;top:-4px;" title="This toggles relative size of all pie charts. When enabled, the pie charts are sized relative to the pie chart with the largest center total." />
               </div>
-              <div style="margin:10px;"><span>Accessibility View</span><input id="ViewBtn" aria-controls="dataViz" title="Toggle accessibility view" class="cmn-toggle cmn-toggle-round" type="checkbox">
+			  
+              <div style="margin:10px;" role="button" ><span tabindex="0" onClick="$('#ViewBtn').trigger('click');" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();$('#ViewBtn').trigger('click');};">Accessibility View</span>
+			  <input id="ViewBtn" aria-controls="dataViz" title="Toggle accessibility view" class="cmn-toggle cmn-toggle-round" type="checkbox" onClick="ViewBtn()" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();ViewBtn()};">
                 <label for="ViewBtn"></label><img class='toggleImg' alt="Help Icon" src='./img/questionIcon.gif' width="15" height="15" style="position:relative;top:-4px;" title="This toggles the legend of the pie charts between colours and textures so that they can be viewed and printed in black and white." />
               </div>
             </fieldset>
           </div>
         </div>
-        <div class="clearfix"></div>
+         <div class="clearfix"></div>
         <div style="padding-top:40px;">
           <table id = "dataViz" class="text-center" style="font-weight:bold;">
             <thead>
@@ -256,11 +260,15 @@
               <tr>
                 <td><span id="b1">Ages 5-9</span></td>
                 <td id= "b2">
+				<p class="agesTitle">Ages 5-9</p>
+				<p class="sexTitle">Male</p>
                   <div id="sports_m_0509" class="animated-ring">
                     <svg id="svg1"></svg>
                   </div>
                 </td>
                 <td id= "b3">
+				<p class="agesTitle">Ages 5-9</p>
+				<p class="sexTitle">Female</p>
                   <div id="sports_f_0509" class="animated-ring">
                     <svg id="svg4"></svg>
                   </div>
@@ -272,11 +280,15 @@
               <tr>
                 <td><span id="c1">Ages 10-14</span></td>
                 <td id="c2">
+				<p class="agesTitle">Ages 10-14</p>
+				<p class="sexTitle">Male</p>
                   <div id="sports_m_1014" class="animated-ring">
                     <svg id="svg2"></svg>
                   </div>
                 </td>
                 <td id="c3">
+				<p class="agesTitle">Ages 10-14</p>
+				<p class="sexTitle">Female</p>
                   <div id="sports_f_1014" class="animated-ring">
                     <svg id="svg5"></svg>
                   </div>
@@ -288,11 +300,15 @@
               <tr>
                 <td ><span id="d1">Ages 15-19</span></td>
                 <td id="d2">
+				<p class="agesTitle">Ages 15-19</p>
+				<p class="sexTitle">Male</p>
                   <div id="sports_m_1519" class="animated-ring">
                     <svg id="svg3"></svg>
                   </div>
                 </td>
                 <td id="d3">
+				<p class="agesTitle">Ages 15-19</p>
+				<p class="sexTitle">Female</p>
                   <div id="sports_f_1519" class="animated-ring">
                     <svg id="svg6"></svg>
                   </div>
@@ -304,12 +320,14 @@
             </tbody>
           </table>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.min.js" data-semver="3.4.6" data-require="d3@*"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.min.js" data-semver="3.4.6" data-require="d3@*"></script>
         <script>
+		 $('.agesTitle').hide();
 		  // [EN] isIE is a variable that checks if the current browser is Microsoft Internet Explorer/Edge
 		  // [FR] La variable isIE v&eacute;rifie si le navigateur utilis&eacute; est Microsoft Internet Explorer/Edge.
           var isIE = /*@cc_on!@*/false || !!document.documentMode;
-          
+          if (/Edge\/\d./i.test(navigator.userAgent))
+			isIE = true;
 		  // [EN] After everything on the page has loaded, this function executes.
 		  // [FR] Cette fonction s&rsquo;ex&eacute;cute apr&egrave;s le chargement de tous les &eacute;l&eacute;ments de la page.
           $(document).ready(function() {          
@@ -323,13 +341,19 @@
           			$(this).attr('href', $(this).attr('href') + encodeURIComponent(document.URL));
           	});
 			
-			$('#generateImage').on('click', function() {
-			// [EN] This function is called when the generate image button in the share section is clicked.
+			if (!isIE)
+				DownloadDataBtn();
+			
+          });
+		  
+		  function GenerateImage() {
+		  // [EN] This function is called when the generate image button in the share section is clicked.
 			// [FR] Cette fonction est appel&eacute;e &agrave; chaque clic du bouton de g&eacute;n&eacute;ration de l&rsquo;image, dans la section de partage.
-          				$('#imageDownload').text('Please wait...');
-          				download();
-          			});
-			$('#DownloadBtn').on('click', function() {
+					$('#imageDownload').text('Please wait...');
+					download();
+		  }
+		  
+		  function DownloadDataBtn() {
 			// [EN] This function is called when the Download (.csv) button is clicked.
 			// Takes data from each data object array (for each svg), and converts
 			// it into text that can be loaded into a Microsoft Excel file.
@@ -359,8 +383,9 @@
 						downloadData.href = encodeURI(csv);
 						downloadData.download = 'head-injury-infographic.csv';
 				}
-			});
-          });
+			}
+			
+			
           
           changeTableFormat();
           $('.checkmark8').find('path').hide();
@@ -521,28 +546,33 @@
 		  // The notRel variable is toggled and the according function for relative size is executed.
 		  // [FR] L&rsquo;&eacute;v&eacute;nement onclick du bouton ToggleBtn active ou d&eacute;sactive la glissi&egrave;re de taille relative.
 		  // La variable notRel est activ&eacute;e ou d&eacute;sactiv&eacute;e, et la fonction correspondante (taille relative) est ex&eacute;cut&eacute;e).
-          $('#ToggleBtn').click(function() {
-          	$('#imageDownload').attr('disabled', true);
+          function ToggleBtn() {
+			console.log("yes");
+          	$('#imageDownload').addClass('disabled');		
               notRel = !notRel;
-              if (!notRel)
+              if (!notRel) {				  
                   disableRel();
-              else
+              }else{				  
                   enableRel();
-          });
+			  }
+			}
 		  
 		  // [EN] The ViewBtn onclick event toggles the accessibility view slider.
 		  // [FR] L&rsquo;&eacute;v&eacute;nement onclick du bouton ViewBtn affiche ou masque la glissi&egrave;re d&rsquo;accessibilit&eacute;.
-          $('#ViewBtn').click(function() {
-          	$('#imageDownload').attr('disabled', true);
+          function ViewBtn() {
+		      $('#imageDownload').addClass('disabled');
               $('input:checkbox').toggle();
               aView = !aView;
               lastControl = "accessibilityView";
               startDraw();
-          });
-          
+		  }
           // [EN] changeTableFormat() swaps the button text and rearranges the table.
 		  // [FR] La fonction changeTableFormat() modifie le libell&eacute; du bouton et r&eacute;organise le tableau.  
           function changeTableFormat(){
+			if ($(window).width() < 992) {
+				$('.sexTitle').toggle();
+				$('.agesTitle').toggle();
+			}
           	$('#imageDownload').attr('disabled', true);
               var elem= document.getElementById("AgeSexBtn");
               if(elem.value == "Age"){
@@ -2205,7 +2235,7 @@
           			}			
           		}
         </script>
-<h3>Highlights</h3>
+		<h3>Highlights</h3>
 		<ul><li>Boys had more sports and recreation-related concussions and other brain injuries than girls.</li>
 <li>Among both boys and girls, sports and recreation-related concussions and brain injuries were most common among youth aged 10-14 years.</li>
 <li>Concussions and other brain injuries were most common in boys aged 10-19 years who played ice hockey, and among girls in the same age group, that played soccer.</li></ul>
@@ -2234,7 +2264,7 @@
 	  <div id="shareDiv">
         <h3>Share</h3>
         <div id="imgDownloadDiv" class="text-center">
-          <a id="generateImage" class="btn btn-default">Generate Image</a> <a id="imageDownload" class="btn btn-primary disabled">Download (.png)</a><br/>
+          <a tabindex="0" role="button" id="generateImage" class="btn btn-default" onClick="GenerateImage()" onkeypress="if(event.charCode==32||event.charCode==13){event.preventDefault();GenerateImage()};">Create Image</a> <a tabindex="0" id="imageDownload" class="btn btn-primary disabled">Download Image (.png)</a><br/>
         </div>
         <div class="col-md-12 text-center" id="share">
           <a target="_blank" class="btn" id="githubBtn" href="https://github.com/infobase-phac-aspc/infobase-phac-aspc.github.io"><span class="fa fa-github" title="GitHub"></span></a><a target="_blank" onclick='generateUrl(this)' class="btn" id="googleBtn" href="https://plus.google.com/share?url="><span class="fa fa-google-plus" title="Google Plus"></span></a><a target="_blank" onclick='generateUrl(this)' class="btn" id="twitterBtn" href="https://twitter.com/share?url="><span class="fa fa-twitter" title="Twitter"></span></a><a target="_blank" onclick='generateUrl(this)' class="btn" id="facebookBtn" href="http://www.facebook.com/sharer/sharer.php?u="><span class="fa fa-facebook" title="Facebook"></span></a>
