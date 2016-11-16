@@ -18,12 +18,12 @@
     <meta name="dcterms.subject" title="scheme" content="French subject terms / Termes de sujet en fran&ccedil;ais"/>
     <meta name="dcterms.language" title="ISO639-2" content="eng"/>
     <!--[if gte IE 9 | !IE ]><!--> 
-    <link href="../assets/favicon.ico" rel="icon" type="image/x-icon"/>
+    <link href="./img/favicon.ico" rel="icon" type="image/x-icon"/>
     <!--<link rel="stylesheet" href="../css/wet-boew.min.css"/>--> 
     <!--<![endif]--> 
     <!-- b<link rel="stylesheet" href="../css/theme.min.css"/>--> 
     <!--[if lt IE 9]>
-    <link href="../assets/favicon.ico" rel="shortcut icon"/>
+    <link href="./img/favicon.ico" rel="shortcut icon"/>
     <link rel="stylesheet" href="../css/ie8-wet-boew.min.css"/>
     <link rel="stylesheet" href="../css/ie8-theme.min.css"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <script src="./js/ie8-wet-boew.min.js"></script><![endif]--> 
@@ -547,7 +547,6 @@
 		  // [FR] L&rsquo;&eacute;v&eacute;nement onclick du bouton ToggleBtn active ou d&eacute;sactive la glissi&egrave;re de taille relative.
 		  // La variable notRel est activ&eacute;e ou d&eacute;sactiv&eacute;e, et la fonction correspondante (taille relative) est ex&eacute;cut&eacute;e).
           function ToggleBtn() {
-			console.log("yes");
           	$('#imageDownload').addClass('disabled');		
               notRel = !notRel;
               if (!notRel) {				  
@@ -1704,23 +1703,18 @@
           			if (isNaN(a.endAngle))
           				a.endAngle = 0;
           				if (a.startAngle == 0 && lastClick == this._current.data.dept && this._current.data.count == 0) {
-          					//console.log("a");
           					var i = d3.interpolate({startAngle: 0, endAngle:0}, a);
           				}
           				else if (this._current.startAngle == 0 && lastClick == this._current.data.dept && this._current.data.count != 0) {
-          					//console.log("b");
           					var i = d3.interpolate(this._current, {startAngle: 0, endAngle:0});
           				}
           				else if (lastClick == this._current.data.dept && this._current.data.count != 0) {
-          					//console.log("c");
           					var i = d3.interpolate(this._current, {startAngle: prevStart, endAngle: prevStart});
           				}
           				else if (lastClick == this._current.data.dept && this._current.data.count == 0) {
-          					//console.log("d");
           					var i = d3.interpolate({startAngle: prevEnd, endAngle: prevEnd}, a);
           				}
           				else {
-          					//console.log("e");
           					var i = d3.interpolate(this._current, a);
           				}
           			   
