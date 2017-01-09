@@ -45,7 +45,16 @@
 	
 	.preview, .prevText {
 		margin: 10px;
-		font-size: 1.2em;
+	}
+	
+	.projCard {
+		border: 1px solid #ddd;
+		padding: 5px;
+		margin-bottom: 10px;
+		background: #fff;
+	}
+	.prevText h3 {
+		margin-top: 10px;
 	}
 	
 	</style>
@@ -146,24 +155,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="row">
 		<h1 id="wb-cont" property="name">Infobase GitHub Portal</h1>
 		<div class="clearfix"></div>
-		<p>Welcome to the Infobase GitHub Portal, where code used by the Infobase Development team is shared with other developers. Here you can find the most recently released Infobase Development projects.</p>
+		<p>Welcome to the Infobase GitHub Portal, where code used by the Infobase Development team is shared with other developers. Here you can find the most recently released Infobase Development projects; alternatively you can <a href="https://github.com/infobase-phac-aspc/infobase-phac-aspc.github.io">return to the GitHub-view</a> of Infobase GitHub.</p>
             </div>
 			<section>
 			<h2>Recent Projects</h2>
 		<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-12 projCard">
 			<div class="col-md-3"><a href="#"><img class="preview" src="img/interactive-report-preview.png" /></a></div>
 			<div class="col-md-8 prevText">
-				<p><strong>Project</strong>: How Healthy are Canadians? - <a href="#">Interactive Report</a></p>
-				<p><strong>Uses</strong>: <a href="https://firebase.google.com/">Google Firebase</a></p>
-				<p><strong>Status</strong>: Coming soon</p>
+			<h3>Interactive Report</h3>
+				<p><strong>Project</strong>: How Healthy are Canadians?</p>
+				<p><strong>Resources</strong>: <a href="https://firebase.google.com/">Google Firebase</a></p>
+				<p><strong>GitHub</strong>: <a href="#">Live</a> | <a href="#">Raw File</a></p>
+				<p><strong>Status</strong>: In development</p>
 			</div>
 		</div>
-		<div class="col-md-12">
+		<div class="col-md-12 projCard">
 			<div class="col-md-3"><a href="head-injury-infographic.html"><img class="preview" src="img/head-injury-preview.png" /></a></div>
 			<div class="col-md-8 prevText">
-				<p><strong>Project</strong>: Concussion & Brain Injuries in Canadian Children and Youth - <a href="head-injury-infographic.html">Head Injury Infographic (d3.js)</a></p>
-				<p><strong>Uses</strong>: <a href="https://d3js.org/">Data-Driven Documents (d3.js)</a></p>
+			<h3>Head Injury Infographic</h3>
+				<p><strong>Project</strong>: Concussion & Brain Injuries in Canadian Children and Youth</p>
+				<p><strong>Resources</strong>: <a href="https://d3js.org/">Data-Driven Documents (d3.js)</a></p>
+				<p><strong>GitHub</strong>: <a href="head-injury-infographic.html">Live</a> | <a href="https://github.com/infobase-phac-aspc/infobase-phac-aspc.github.io/blob/master/head-injury-infographic.html">Raw File</a></p>
 				<p><strong>Status</strong>: <a href="http://infobase.phac-aspc.gc.ca/interactive-report/public/cameron.html">Released</a></p>
 			</div>
 		</div>
